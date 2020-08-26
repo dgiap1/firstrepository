@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here (Semester is OK)
+ *  @author Derek Giap
+ *  @date 08/25/2020
  *  @file h00.cpp
  */
 #include <iostream>
@@ -19,6 +19,10 @@ int run()
     // Add your implementation comments here
 
     // Write your code here
+
+    cout << STUDENT << " starter code." << endl;
+    cout << "[1, 1]" << endl;
+
 
     return 0;
 }
