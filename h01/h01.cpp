@@ -48,8 +48,10 @@ int run()
     int afterHours = (((after / 60 % 12) + 11) % 12) + 1;
     int afterMinutes = after % 60 * -1;
     int beforeHours = (((before / 60) + 11) % 12) + 1;
-    int beforeMinutes = (before % 60) * -1;
-
+    int beforeMinutes = (before % 60);
+        if (beforeMinutes < 0) {
+            beforeMinutes = beforeMinutes * 1;
+        }
     //Output
     cout << "\n";
     cout << setfill('0');
