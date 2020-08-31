@@ -41,7 +41,9 @@ int run()
     int afterMinutes = after % 60; // Minute Unit for "after"
     int beforeHours = before / 60; // Hour Unit for "before"
     int beforeMinutes = before % 60; // Minute Unit for "before"
-
+        if (beforeMinutes < 0) {
+            beforeMinutes = 60 - (beforeMinutes * -1);
+        }
     //Output
     cout << "\n";
     cout << setfill('0');
