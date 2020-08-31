@@ -41,7 +41,7 @@ int run()
     double lethalDoseDieterCans = lethalDoseDieter / SWEETENER_PER_CAN;
 
     //Output
-    cout << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
+    std::cout << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
 
     return 0;
 }
