@@ -36,14 +36,11 @@ int run()
     int totalTime = timeHours * 60 + timeMinutes; // Time in integer units.
     int duration = durationHours * 60 + durationMinutes; // Duration to add and subtract.
     int after = totalTime + duration; // Time + Duration in integer units.
-    int before = totalTime - duration; // Time - Duration in integer units.
+    int before = (totalTime + 1440) - duration; // Time - Duration in integer units.
     int afterHours = (((after / 60 % 12) + 11) % 12) + 1; // Hour Unit for "after"
     int afterMinutes = after % 60; // Minute Unit for "after"
     int beforeHours = before / 60; // Hour Unit for "before"
     int beforeMinutes = before % 60; // Minute Unit for "before"
-        if (beforeMinutes < 0) {
-            beforeMinutes = 60 - (beforeMinutes * -1);
-        }
     //Output
     cout << "\n";
     cout << setfill('0');
