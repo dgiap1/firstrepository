@@ -38,7 +38,7 @@ int run()
     double lethalDoseDieterCans = lethalDoseDieter / SWEETENER_PER_CAN; // Dose to kill human divided by sweetener per can to see how many cans will kill him.
 
     //Output
-    std::cout << std::fixed << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
+    std::cout << std::fixed << std::setprecision(0) << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
 
     return 0;
 }
