@@ -40,7 +40,7 @@ int run()
     int afterHours = (((after / 60 % 12) + 11) % 12) + 1; // Hour Unit for "after"
     int afterMinutes = after % 60; // Minute Unit for "after"
     int beforeHours = before / 60; // Hour Unit for "before"
-    int beforeMinutes = before % 60 + 60; // Minute Unit for "before"
+    int beforeMinutes = before % 60; // Minute Unit for "before"
 
     //Output
     cout << "\n";
