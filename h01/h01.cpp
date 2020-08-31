@@ -44,7 +44,7 @@ int run()
     int totalTime = timeHours * 60 + timeMinutes;
     int duration = durationHours * 60 + durationMinutes;
     int after = totalTime + duration;
-    int before = totalTime - duration;
+    int before = totalTime - duration + 2400;
     int afterHours = after / 60 % 12;
     int afterMinutes = after % 60;
     int beforeHours = (before / 60);
