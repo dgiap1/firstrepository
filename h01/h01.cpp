@@ -18,37 +18,29 @@ extern string ASSIGNMENT;
  */
 int run()
 {
-    // 1. Title and introduction
-    // - blank line
-    // 2. Input section: prompt and input on same line
-    // 3. Processing section - compute the results
-    // - blank line
-    // 4. Output section: test data inside brackets [ ]
-
-    // Input
-    cout << "   Time: ";
+    //Input
     int timeHours;
-    cin >> timeHours;
-    cin.get(); // discard the colon
     int timeMinutes;
-    cin >> timeMinutes;
-
-    cout << "   Duration: ";
     int durationHours;
+    int durationMinutes;
+    cout << "   Time: ";
+    cin >> timeHours;
+    cin.get(); // Discards the colon.
+    cin >> timeMinutes;
+    cout << "   Duration: ";
     cin >> durationHours;
     cin.get(); // discard next
-    int durationMinutes;
     cin >> durationMinutes;
 
     //Processing
-    int totalTime = timeHours * 60 + timeMinutes;
-    int duration = durationHours * 60 + durationMinutes;
-    int after = totalTime + duration;
-    int before = totalTime - duration;
-    int afterHours = (((after / 60 % 12) + 11) % 12) + 1;
-    int afterMinutes = after % 60;
-    int beforeHours = before / 60;
-    int beforeMinutes = before % 60;
+    int totalTime = timeHours * 60 + timeMinutes; // Time in integer units.
+    int duration = durationHours * 60 + durationMinutes; // Duration to add and subtract.
+    int after = totalTime + duration; // Time + Duration in integer units.
+    int before = totalTime - duration; // Time - Duration in integer units.
+    int afterHours = (((after / 60 % 12) + 11) % 12) + 1; // Hour Unit for "after"
+    int afterMinutes = after % 60; // Minute Unit for "after"
+    int beforeHours = before / 60; // Hour Unit for "before"
+    int beforeMinutes = before % 60 + 60; // Minute Unit for "before"
 
     //Output
     cout << "\n";
