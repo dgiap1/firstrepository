@@ -47,8 +47,8 @@ int run()
     int before = totalTime - duration;
     int afterHours = after / 60 % 12;
     int afterMinutes = after % 60;
-    int beforeHours = before / 60;
-    int beforeMinutes = before % 60;
+    int beforeHours = (before / 60) + 12;
+    int beforeMinutes = (before % 60) + 60;
 
     //Output
     cout << "\n";
