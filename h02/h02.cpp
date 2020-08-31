@@ -35,10 +35,10 @@ int run()
     //Processing
     double desiredWeightGrams = desiredWeightPounds * GRAMS_PER_POUND; // Convert pounds to grams.
     double lethalDoseDieter = (lethalDoseMouse * (desiredWeightGrams / mouseWeight)); // Desired weight divided by mouseWeight to see ratio of human to mouse. Multiply by lethal mouse dose to find lethal human dose.
-    double lethalDoseDieterCans = (lethalDoseMouse * (desiredWeightGrams / mouseWeight)) / SWEETENER_PER_CAN; // Dose to kill human divided by sweetener per can to see how many cans will kill him.
+    double lethalDoseDieterCans = lethalDoseDieter / SWEETENER_PER_CAN; // Dose to kill human divided by sweetener per can to see how many cans will kill him.
 
     //Output
-    cout << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
+    std::cout << std::fixed << "Lethal dose in grams, cans is [" << lethalDoseDieter << ", " << lethalDoseDieterCans << "]" << endl;
 
     return 0;
 }
