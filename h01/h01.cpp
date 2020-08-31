@@ -25,7 +25,7 @@ int run()
     // - blank line
     // 4. Output section: test data inside brackets [ ]
 
-    // Prompt and read the input
+    // Input
     cout << "   Time: ";
     int timeHours;
     cin >> timeHours;
@@ -41,20 +41,22 @@ int run()
     cin >> durationMinutes;
 
     //Processing
-    int sumTime = timeHours * 60 + timeMinutes;
+    int totalTime = timeHours * 60 + timeMinutes;
     int duration = durationHours * 60 + durationMinutes;
-    int after = sumTime + duration;
-    int before = sumTime - duration;
+    int after = totalTime + duration;
+    int before = totalTime - duration;
     int afterHours = after / 60;
     int afterMinutes = after % 60;
     int beforeHours = before / 60;
     int beforeMinutes = before % 60;
-    
+
     //Output
-    cout << endl;
-    cout << durationHours << ":" << durationMinutes;
-    cout << afterHours << ":" << afterMinutes;
-    
+    cout << "\n";
+    cout << setfill('0');
+    cout << setw(2) << durationHours << ":" <<setw(2) << durationMinutes << " hours after, and before, "
+        << setw(2) << timeHours << ":" << setw(2) << timeMinutes << " is ["
+        << setw(2) << afterHours << ":" << setw(2) << afterMinutes << ", "
+        << setw(2) << beforeHours << ":" << setw(2) << beforeMinutes << "]" << endl;
 
     return 0;
 }
