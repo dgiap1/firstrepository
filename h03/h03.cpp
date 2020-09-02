@@ -70,6 +70,10 @@ int run()
 		{
 			errorMessage = "Invalid combination";
 		}
+		else
+		{
+			errorMessage = "Invalid input";
+		}
 		cout << "Grade value is [" << errorMessage << "]" << endl;
 	}
 
