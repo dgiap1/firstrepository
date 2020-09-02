@@ -35,7 +35,7 @@ int run()
 	double points = letterToPoints(letterGrade);
 	printReport(points);
 */
-	
+
 	// 2. Input section
 	cout << "Enter your letter grade: ";
 	string gradeIn;
@@ -59,7 +59,20 @@ int run()
 
 	// 4. Output section
 	cout << fixed << showpoint << setprecision(1);
-	cout << "Grade value is [" << gradePoints << "]" << endl;
+	if (gradePoints >= 0)
+	{
+		cout << "Grade value is [" << gradePoints << "]" << endl;
+	}
+	else
+	{
+		string errorMessage;
+		if (gradeIn == "A+" || gradeIn == "F+" || gradeIn == "F-")
+		{
+			errorMessage = "Invalid combination";
+		}
+
+		cout << "Grade value is [" << errorMessage << "]" << endl;
+	}
 
     return 0;
 }
