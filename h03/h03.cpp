@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Derek Giap
+ *  @date 09/02/2020
  *  @file h03.cpp
  */
 #include <iostream>
@@ -9,7 +9,7 @@
 using namespace std;
 using stringIn = const string&;
 
-string STUDENT = "WHO ARE YOU"; // Add your Canvas login name
+string STUDENT = "dgiap1"; // Add your Canvas login name
 extern string ASSIGNMENT;
 
 // Function Prototypes
@@ -28,11 +28,30 @@ const double INVALID_INPUT = -2.0;
  */
 int run()
 {
-	// Don't change anything inside this function
-	printTitle();
-	string letterGrade = getInput();
-	double points = letterToPoints(letterGrade);
-	printReport(points);
+	// 2. Input section
+	cout << "Enter your letter grade: ";
+	string gradeIn;
+	getline(cin, gradeIn);
+
+	// 3. Processing section
+	double gradePoints = -1; // error condition if -1
+
+	if (gradeIn == "A") gradePoints = 4.0;
+	else if (gradeIn == "A-") gradePoints = 3.7;
+	else if (gradeIn == "B+") gradePoints = 3.3;
+	else if (gradeIn == "B") gradePoints = 3.0;
+	else if (gradeIn == "B-") gradePoints = 2.7;
+	else if (gradeIn == "C+") gradePoints = 2.3;
+	else if (gradeIn == "C") gradePoints = 2.0;
+	else if (gradeIn == "C-") gradePoints = 1.7;
+	else if (gradeIn == "D+") gradePoints = 1.4;
+	else if (gradeIn == "D") gradePoints = 1.0;
+	else if (gradeIn == "D-") gradePoints = 0.7;
+	else if (gradeIn == "F") gradePoints = 0.0;
+
+	// 4. Output section
+	cout << fixed << showpoint << setprecision(1);
+	cout << "Grade value is [" << gradePoints << "]" << endl;
 
     return 0;
 }
