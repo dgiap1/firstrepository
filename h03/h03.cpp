@@ -26,8 +26,16 @@ const double INVALID_INPUT = -2.0;
  * Calculates the grade points for a letter grade.
  * @return 0 for success.
  */
+
 int run()
 {
+	// Don't change anything inside this function
+/**	printTitle();
+	string letterGrade = getInput();
+	double points = letterToPoints(letterGrade);
+	printReport(points);
+*/
+	
 	// 2. Input section
 	cout << "Enter your letter grade: ";
 	string gradeIn;
@@ -44,7 +52,7 @@ int run()
 	else if (gradeIn == "C+") gradePoints = 2.3;
 	else if (gradeIn == "C") gradePoints = 2.0;
 	else if (gradeIn == "C-") gradePoints = 1.7;
-	else if (gradeIn == "D+") gradePoints = 1.4;
+	else if (gradeIn == "D+") gradePoints = 1.3;
 	else if (gradeIn == "D") gradePoints = 1.0;
 	else if (gradeIn == "D-") gradePoints = 0.7;
 	else if (gradeIn == "F") gradePoints = 0.0;
