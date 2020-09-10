@@ -8,7 +8,7 @@ using namespace std;
 
 string STUDENT = "dgiap1";  // Add your Canvas login name
 
-string toFrenchGender(const string& country)
+int toFrenchGender(const string& country)
 {
     string prefix = "";
     string islands = "iles";
@@ -17,7 +17,7 @@ string toFrenchGender(const string& country)
     
     string result = prefix + country;
     
-    return last;  
+    return len;  
 }
 
 
