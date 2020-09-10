@@ -16,7 +16,7 @@ extern string ASSIGNMENT;
  * @return 0 for success.
  */
 
-string getStatus(double gpa, double credits, double honorsCredits)
+string getStatus(double gpa, int credits, int honorsCredits)
 {
 	string status = "";
 	if (gpa >= 2.0 && credits >= 180)
@@ -33,7 +33,7 @@ string getStatus(double gpa, double credits, double honorsCredits)
 			}
 			else
 			{
-				status = "cum laude";
+				status = "graduating";
 			}
 		}
 		else
