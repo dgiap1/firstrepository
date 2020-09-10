@@ -10,6 +10,9 @@ string STUDENT = "dgiap1";  // Add your Canvas login name
 
 string toFrenchGender(const string& country)
 {
+    string vowels = "AEIOU";
+    string first = country.substr(0, 1);
+    
     string prefix = "";
     string islands = "iles";
     int len = country.length();
@@ -22,7 +25,14 @@ string toFrenchGender(const string& country)
     }
     else if (lastChar == "e" || lastChar == "o")
     {
-        prefix = "la ";
+        if (vowels.find(first))
+        {
+            prefix = "l'";
+        }
+        else
+        {
+            prefix = "la ";
+        }
     }
     else
     {
