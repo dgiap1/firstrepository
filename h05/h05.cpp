@@ -13,14 +13,14 @@ string toFrenchGender(const string& country)
     string prefix = "";
     string islands = "iles";
     int len = country.length();
-    string lastTwo = country.substr(country.length() - 2);
-    string last = country.substr(country.back());
-    
-    if (country.substr(0, 4) == "iles" || lastTwo == "es" || lastTwo == "is" || lastTwo == "os" || lastTwo == "as")
+    string last = country.substr(country.length() - 2);
+    string lastChar = country.substr(country.length() - 1);
+
+    if (country.substr(0, 4) == "iles" || last == "es" || last == "is" || last == "os" || last == "as")
     {
         prefix = "les ";
     }
-    else if (last == "e" || last == "o")
+    else if (lastChar == "e" || lastChar == "o")
     {
         prefix = "la ";
     }
@@ -28,10 +28,10 @@ string toFrenchGender(const string& country)
     {
         prefix = "le ";
     }
-    
+
     string result = prefix + country;
-    
-    return result;  
+
+    return result;
 }
 
 
