@@ -1,0 +1,25 @@
+INSTRUCTOR TESTING H05--dgiap1
+----------------------------------------------------------------------
+Checking function: toFrenchGender("country") -------------------
+   + toFrenchGender("Pays-Bas")->les Pays-Bas
+   + toFrenchGender("Colombie")->la Colombie
+   + toFrenchGender("Portugal")->le Portugal
+   + toFrenchGender("Etats-Unis")->les Etats-Unis
+   + toFrenchGender("Macedonie")->la Macedonie
+   + toFrenchGender("Bahamas")->les Bahamas
+   + toFrenchGender("Madagascar")->Madagascar
+   + toFrenchGender("iles Galapagos")->les iles Galapagos
+   + toFrenchGender("Monaco")->Monaco
+   + toFrenchGender("Bresil")->le Bresil
+   + toFrenchGender("Irelande")->l'Irelande
+   + toFrenchGender("Suisse")->la Suisse
+   + toFrenchGender("Equateur")->l'Equateur
+   + toFrenchGender("Chili")->le Chili
+   + toFrenchGender("Perou")->le Perou
+----------------------------------------------------------------------
+  Tests passing 15/15 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H05:dgiap1: ALL TESTS -- PASS 15/15 (100%).
+----------------------------------------------------------------------
+MTU5OTc3ODU2ODpkZ2lhcDE6SDA1OjEwMC4wMCU=
