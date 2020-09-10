@@ -11,8 +11,13 @@ string STUDENT = "dgiap1";  // Add your Canvas login name
 string toFrenchGender(const string& country)
 {
     string prefix = "";
+    string islands = "iles";
+    int len = country.length();
+    string last = country.substr(country.length() - 2);
+    
     string result = prefix + country;
-    return result;  
+    
+    return last;  
 }
 
 
