@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Derek Giap
+ *  @date 09/10/2020
  *  @file h04.cpp
  */
 #include <iostream>
@@ -8,16 +8,57 @@
 #include <string>
 using namespace std;
 
-string STUDENT = "WHO ARE YOU";  // Add your Canvas login name
+string STUDENT = "dgiap1";  // Add your Canvas login name
 extern string ASSIGNMENT;
-
-// Add your function declaration here
-
 
 /**
  * Describe the purpose of your program here.
  * @return 0 for success.
  */
+
+string getStatus(double gpa, double credits, double honorsCredits)
+{
+	string status = "";
+	if (gpa >= 2.0 && credits >= 180)
+	{
+		if (honorsCredits >= 15)
+		{
+			if (gpa >= 3.6 && gpa < 3.8)
+			{
+				status = "magna cum laude";
+			}
+			else if (gpa >= 3.8)
+			{
+				status = "summa cum laude";
+			}
+			else
+			{
+				status = "cum laude";
+			}
+		}
+		else
+		{
+			if (gpa >= 3.6 && gpa < 3.8)
+			{
+				status = "cum laude";
+			}
+			else if (gpa >= 3.8)
+			{
+				status = "magna cum laude";
+			}
+			else
+			{
+				status = "graduating";
+			}
+		}
+	}
+	else
+	{
+		status = "not graduating";
+	}
+	return status;
+}
+
 int run()
 {
 	// DON'T CHANGE ANYTHING IN THIS FUNCTION
@@ -36,5 +77,3 @@ int run()
 
     return 0;
 }
-
-// Implement your function here
