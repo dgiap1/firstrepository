@@ -19,8 +19,8 @@ string toFrenchGender(const string& country)
 
     int len = country.length();
     string first = country.substr(0, 1);
-    string last = country.substr(country.length() - 2);
-    string lastChar = country.substr(country.length() - 1);
+    string last = country.substr(len - 2);
+    string lastChar = country.substr(len - 1);
 
     if (masculine.find(country) != string::npos)
     {
@@ -51,7 +51,6 @@ string toFrenchGender(const string& country)
     }
 
     string result = prefix + country;
-
     return result;
 }
 
