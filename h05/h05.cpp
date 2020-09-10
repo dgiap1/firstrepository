@@ -10,7 +10,8 @@ string STUDENT = "dgiap1";  // Add your Canvas login name
 
 string toFrenchGender(const string& country)
 {
-    string result = "who knows?";
+    string prefix = "";
+    string result = prefix + country;
     return result;  
 }
 
