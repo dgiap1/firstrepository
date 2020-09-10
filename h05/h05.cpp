@@ -14,12 +14,21 @@ string toFrenchGender(const string& country)
     string islands = "iles";
     int len = country.length();
     string lastTwo = country.substr(country.length() - 2);
+    string last = country.substr(country.back());
     
     if (country.substr(0, 4) == "iles" || lastTwo == "es" || lastTwo == "is" || lastTwo == "os" || lastTwo == "as")
     {
         prefix = "les ";
     }
-
+    else if (last == "e" || last == "o")
+    {
+        prefix = "la ";
+    }
+    else
+    {
+        prefix = "le ";
+    }
+    
     string result = prefix + country;
     
     return result;  
