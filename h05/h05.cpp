@@ -11,15 +11,26 @@ string STUDENT = "dgiap1";  // Add your Canvas login name
 string toFrenchGender(const string& country)
 {
     string vowels = "AEIOU";
-    string first = country.substr(0, 1);
-    
     string prefix = "";
     string islands = "iles";
+    
+    string plain = "Israel, Madagascar, Singapore, Sri Lanka, Monaco, Cuba, Cyprus";
+    string masculine = "Belize, Cambodge, Honduras, Mexique, Mozambique, Costa Rica, Zimbabwe";
+    
     int len = country.length();
+    string first = country.substr(0, 1);
     string last = country.substr(country.length() - 2);
     string lastChar = country.substr(country.length() - 1);
-
-    if (country.substr(0, 4) == "iles" || last == "es" || last == "is" || last == "os" || last == "as")
+    
+    if (masculine.find(country))
+    {
+        prefix = "le ";
+    }
+    else if (plain.find(country))
+    {
+        prefix = "";
+    }
+    else if (country.substr(0, 4) == "iles" || last == "es" || last == "is" || last == "os" || last == "as")
     {
         prefix = "les ";
     }
