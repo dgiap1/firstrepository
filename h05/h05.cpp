@@ -13,24 +13,24 @@ string toFrenchGender(const string& country)
     string vowels = "AEIOU";
     string prefix = "";
     string islands = "iles";
-    
+
     string plain = "Israel, Madagascar, Singapore, Sri Lanka, Monaco, Cuba, Cyprus";
     string masculine = "Belize, Cambodge, Honduras, Mexique, Mozambique, Costa Rica, Zimbabwe";
-    
+
     int len = country.length();
     string first = country.substr(0, 1);
     string last = country.substr(country.length() - 2);
     string lastChar = country.substr(country.length() - 1);
-    
-    if (masculine.find(country))
+
+    if (masculine.find(country) != string::npos)
     {
         prefix = "le ";
     }
-    else if (plain.find(country))
+    else if (plain.find(country) != string::npos)
     {
         prefix = "";
     }
-    else if (country.substr(0, 4) == "iles" || last == "es" || last == "is" || last == "os" || last == "as")
+    else if (country.substr(0, 4) == islands || last == "es" || last == "is" || last == "os" || last == "as")
     {
         prefix = "les ";
     }
