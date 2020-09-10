@@ -34,9 +34,9 @@ string toFrenchGender(const string& country)
     {
         prefix = "les ";
     }
-    else if (lastChar == "e" || lastChar == "o")
+    else if (vowels.find(first) != string::npos)
     {
-        if (vowels.find(first) != string::npos)
+        if (lastChar == "e" || lastChar == "o")
         {
             prefix = "l'";
         }
