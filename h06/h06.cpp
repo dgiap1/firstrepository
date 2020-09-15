@@ -19,7 +19,7 @@ int sumNums(const string& str)
 		if (isdigit(str.at(i)))
 		{
 			int digit = str.at(i);
-			digit = digit * 10;
+			num = num * 10;
 			num = num + digit;
 		}
 		else
