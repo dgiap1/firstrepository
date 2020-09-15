@@ -15,11 +15,11 @@ int sumNums(const string& str)
 	int sum = 0;
 	int num = 0;
 	string bigNumber = "";
-	for (size_t i = 0, len = str.size(); i < len; i++)
+	for (char ch: str)
 	{
-		if (isdigit(str.at(i)))
+		if (isdigit(ch))
 		{
-			bigNumber += str.at(i);
+			bigNumber += ch;
 		}
 		else
 		{
