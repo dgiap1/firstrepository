@@ -1,0 +1,26 @@
+INSTRUCTOR TESTING H06--dgiap1
+----------------------------------------------------------------------
+Checking function: sumNums("str") -------------------
+   + sumNums("t93f2v8c721")
+   + sumNums("h3pn6f291fh5l7v9i2i")
+   + sumNums("a")
+   + sumNums("9aqu6gt1j6f4z2i7")
+   + sumNums("yh69m662")
+   + sumNums("hdv00lb324eie")
+   + sumNums("4p5q4g49o7j0")
+   + sumNums("rj4xubf2")
+   + sumNums("ase06xj")
+   + sumNums("a1234bb11")
+   + sumNums("vll2013s")
+   + sumNums("abc123xyz")
+   + sumNums("bz09napfqxie")
+   + sumNums("aa11b33")
+   + sumNums("5hoco1a1e")
+   + sumNums("hiez6ic3")
+----------------------------------------------------------------------
+  Tests passing 16/16 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H06:dgiap1: ALL TESTS -- PASS 16/16 (100%).
+----------------------------------------------------------------------
+MTYwMDE0ODE4NDpkZ2lhcDE6SDA2OjEwMC4wMCU=
