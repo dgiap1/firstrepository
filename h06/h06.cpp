@@ -24,6 +24,7 @@ int sumNums(const string& str)
 		else
 		{
 			sum += atoi(bigNumber.c_str());
+			bigNumber = "";
 		}
 	}
 	return sum;
