@@ -24,8 +24,7 @@ int sumNums(const string& str)
 		}
 		else
 		{
-			int digit = str.at(i);
-			sum = sum + digit;
+			sum = sum + num;
 			num = 0;
 		}
 	}
