@@ -28,6 +28,7 @@ int sumNums(const string& str)
 			num = 0;
 		}
 	}
+	sum = sum + num;
 	return sum;
 }
 
