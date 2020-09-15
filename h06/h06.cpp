@@ -24,7 +24,8 @@ int sumNums(const string& str)
 			bigNumberHolder = "";
 		}
 	}
-	return sum + atoi(bigNumberHolder.c_str());
+	sum = sum + atoi(bigNumberHolder.c_str());
+	return sum;
 }
 
 
