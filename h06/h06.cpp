@@ -18,7 +18,8 @@ int sumNums(const string& str)
 	{
 		if (isdigit(str[i]))
 		{
-			int digit = str.at(i) * 10;
+			double digit = str.at(i) - 0;
+			num = num * 10;
 			num = num + digit;
 		}
 		else
