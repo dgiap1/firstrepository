@@ -13,18 +13,18 @@ string STUDENT = "dgiap1";  // Add your Canvas login name
 int sumNums(const string& str)
 {
 	int sum = 0;
-	string temp = "";
-	for (char ch: str)
+	string bigNumberHolder = "";
+	for (size_t i = 0, len = str.size(); i < len; i++)
 	{
-		if (isdigit(ch))
-			temp += ch;
+		if (isdigit(str.at(i)))
+			bigNumberHolder += str.at(i);
 		else
 		{
-			sum += atoi(temp.c_str());
-			temp = "";
+			sum += atoi(bigNumberHolder.c_str());
+			bigNumberHolder = "";
 		}
 	}
-	return sum + atoi(temp.c_str());
+	return sum + atoi(bigNumberHolder.c_str());
 }
 
 
