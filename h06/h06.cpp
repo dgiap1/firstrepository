@@ -14,21 +14,18 @@ int sumNums(const string& str)
 {
 	int sum = 0;
 	int num = 0;
+	string bigNumber = "";
 	for (size_t i = 0, len = str.size(); i < len; i++)
 	{
 		if (isdigit(str.at(i)))
 		{
-			int digit = str.at(i);
-			num = num * 10;
-			num = num + digit;
+			bigNumber += str.at(i);
 		}
 		else
 		{
-			sum = sum + num;
-			num = 0;
+			sum += atoi(bigNumber.c_str());
 		}
 	}
-	sum = sum + num;
 	return sum;
 }
 
