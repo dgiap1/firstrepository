@@ -16,9 +16,9 @@ int sumNums(const string& str)
 	int num = 0;
 	for (size_t i = 0, len = str.size(); i < len; i++)
 	{
-		if (isdigit(str[i]))
+		if (isdigit(str.at(i)))
 		{
-			int digit = str[i] - 0;
+			int digit = str.at(i) - 0;
 			num = num * 10;
 			num = num + digit;
 		}
