@@ -14,7 +14,7 @@ int sumNums(const string& str)
 {
 	int sum = 0;
 	int num = 0;
-	for (size_t i = 0, len = str.size(); i < len; i++)
+	for (int i = 0, len = str.size(); i < len; i++)
 	{
 		if (isdigit(str.at(i)))
 		{
