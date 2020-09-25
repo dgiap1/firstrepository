@@ -71,15 +71,20 @@ string everyNth(const string& str, int n)
 bool prefixAgain(const string& str, int n)
 {
     string prefix = str.substr(0, n);
+    bool result = true;
     for (size_t i = 1, len = str.size(); (signed)i < n; i++)
     {
         string word = str.substr(i, n);
         if (word == prefix)
         {
-            return true;
+            result = true;
+        }
+        else
+        {
+            result = false;
         }
     }
-    return false;
+    return result;
 }
 
 
