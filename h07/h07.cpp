@@ -73,7 +73,7 @@ bool prefixAgain(const string& str, int n)
     string prefix = str.substr(0, n);
     for (size_t i = 1, len = str.size(); (signed)i < n; i++)
     {
-        string word = str.substr(0, n);
+        string word = str.substr(i, n);
         if (word == prefix)
         {
             return true;
