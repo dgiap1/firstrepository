@@ -16,12 +16,12 @@ string zipZap(const string& str)
 {
     string result;
     int len = str.size();
-    int i{0};
+    int i = 0;
     if (len < 3)
     {
         return str;
     }
-    while (i <= len - 4)
+    while (i <= len - 2)
     {
         string word = str.substr(i - 4, 4);
         if (word.substr(0) == "z" && word.substr(3) == "e")
