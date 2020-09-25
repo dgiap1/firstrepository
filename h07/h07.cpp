@@ -79,10 +79,6 @@ bool prefixAgain(const string& str, int n)
         {
             result = true;
         }
-        else
-        {
-            result = false;
-        }
     }
     return result;
 }
