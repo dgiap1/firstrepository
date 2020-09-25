@@ -34,6 +34,7 @@ string zipZap(const string& str)
             result += word.substr(0);
             i++;
         }
+    result += str;
     }
     return result;
 }
