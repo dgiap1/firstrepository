@@ -36,7 +36,7 @@ int countCode(const string& str)
 string everyNth(const string& str, int n)
 {
     string result;
-    for (int i = 0; i < n; i++)
+    for (size_t i = 0; i < str.size(); i++)
     {
         if (i % n == 0)
         {
