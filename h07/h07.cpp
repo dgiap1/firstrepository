@@ -36,9 +36,12 @@ int countCode(const string& str)
 string everyNth(const string& str, int n)
 {
     string result;
-    for (int i = 0; i < n; i+=n)
+    for (int i = 0; i < n; i++)
     {
-        result += str;
+        if (i % n == 0)
+        {
+            result += "a";
+        }
     }
     return result;
 }
