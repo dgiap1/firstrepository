@@ -47,21 +47,21 @@ Checking function: countCode -------------------
 
 Checking function: prefixAgain -------------------
    + prefixAgain("abXYabc", 1)
-   X prefixAgain("abXYabc", 2)
-   + prefixAgain("abXYabc", 3)
-   X prefixAgain("xyzxyxyxy", 2)
-   + prefixAgain("xyzxyxyxy", 3)
+   + prefixAgain("abXYabc", 2)
+   X prefixAgain("abXYabc", 3)
+   + prefixAgain("xyzxyxyxy", 2)
+   X prefixAgain("xyzxyxyxy", 3)
    + prefixAgain("Hi12345Hi6789Hi10", 1)
-   X prefixAgain("Hi12345Hi6789Hi10", 2)
-   X prefixAgain("Hi12345Hi6789Hi10", 3)
-   + prefixAgain("Hi12345Hi6789Hi10", 4)
+   + prefixAgain("Hi12345Hi6789Hi10", 2)
+   + prefixAgain("Hi12345Hi6789Hi10", 3)
+   X prefixAgain("Hi12345Hi6789Hi10", 4)
    X prefixAgain("a", 1)
    + prefixAgain("aa", 1)
    X prefixAgain("ab", 1)
 ----------------------------------------------------------------------
-  Tests passing 6/12 (50%).
+  Tests passing 7/12 (58%).
 
 ----------------------------------------------------------------------
-INSTRUCTOR TESTS H07:dgiap1: ALL TESTS -- PASS 39/45 (87%).
+INSTRUCTOR TESTS H07:dgiap1: ALL TESTS -- PASS 40/45 (89%).
 ----------------------------------------------------------------------
-MTYwMDk5NDY2NDpkZ2lhcDE6SDA3Ojg2LjY3JQ==
+MTYwMDk5NTU2NTpkZ2lhcDE6SDA3Ojg4Ljg5JQ==
