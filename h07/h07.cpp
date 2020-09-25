@@ -16,7 +16,7 @@ string zipZap(const string& str)
 {
     string result;
     int len = str.size();
-    int i = 0;
+    int i{0};
     if (len < 3)
     {
         return str;
