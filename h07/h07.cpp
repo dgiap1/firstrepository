@@ -24,7 +24,7 @@ string zipZap(const string& str)
     while (i < len - 2)
     {
         string word = str.substr(i - 4, 4);
-        if (word.substr(0) == "z" && word.substr(3) == "e")
+        if (word.substr(0) == "z" && word.substr(2) == "e")
         {
             result += "zp";
             i += 3;
