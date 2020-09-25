@@ -24,14 +24,14 @@ string zipZap(const string& str)
     while (i < len - 2)
     {
         string word = str.substr(i, 3);
-        if (word.substr(0) == "z" && word.substr(2) == "p")
+        if (word.at(0) == 'z' && word.at(2) == 'p')
         {
             result += "zp";
             i += 3;
         }
         else
         {
-            result += word.substr(0);
+            result += word.at(0);
             i++;
         }
     }
