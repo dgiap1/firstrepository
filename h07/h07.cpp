@@ -70,11 +70,11 @@ string everyNth(const string& str, int n)
 
 bool prefixAgain(const string& str, int n)
 {
-    bool result = true;
+    bool result = false;
     string prefix = str.substr(0, n);
     for (size_t i = 1, len = str.size(); (signed)i < n; i++)
     {
-        string word = str.substr(i - len, len);
+        string word = str.substr(i, n);
         if (word == prefix)
         {
             result = true;
