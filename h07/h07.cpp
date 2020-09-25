@@ -14,7 +14,28 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Place your function definitions in this file.
 string zipZap(const string& str)
 {
-    return 0;
+    string result;
+    int len = str.size();
+    int i = 0;
+    if (len < 3)
+    {
+        return str;
+    }
+    while (i <= len - 4)
+    {
+        string word = str.substr(i - 4, 4);
+        if (word.substr(0) == "z" && word.substr(3) == "e")
+        {
+            result += "zp";
+            i += 3;
+        }
+        else
+        {
+            result += word.substr(0);
+            i++;
+        }
+    }
+    return result;
 }
 
 int countCode(const string& str)
