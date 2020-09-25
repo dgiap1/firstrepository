@@ -12,7 +12,36 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 #include "h07.h"
 
 // Place your function definitions in this file.
+string zipZap(const string& str)
+{
+    return 0;
+}
 
+int countCode(const string& str)
+{
+    int result = 0;
+    for (size_t i = 0, len = str.size(); i < len - 3; i++)
+    {
+        string word = str.substr(i, 4);
+        string front = word.substr(0, 2);
+        string back = word.substr(3);
+        if (front == "co" && back == "e")
+        {
+            result++;
+        }
+    }
+    return result;
+}
+
+string everyNth(const string& str, int n)
+{
+    return 0;
+}
+
+bool prefixAgain(const string& str, int n)
+{
+    return 0;
+}
 
 
 
