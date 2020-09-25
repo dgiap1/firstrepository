@@ -40,7 +40,7 @@ string everyNth(const string& str, int n)
     {
         if (i % n == 0)
         {
-        result += str[0];
+        result += str;
         }
     }
     return result;
