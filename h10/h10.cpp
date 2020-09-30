@@ -15,7 +15,7 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Place your function definitions in this file.
 bool read(const string& a, int& b, bool c)
 {
-    bool result = false;
+    bool result = c;
     if (isdigit(b))
     {
         result = true;
@@ -25,13 +25,13 @@ bool read(const string& a, int& b, bool c)
 
 bool read(const string& a, double& b, bool c)
 {
-    bool result = true;
+    bool result = c;
     return result;
 }
 
 bool read(const string& a, string& b, bool c)
 {
-    bool result = true;
+    bool result = c;
     return result;
 }
 
@@ -66,7 +66,7 @@ int run()
     // cout << "Type a sentence ending in a period: ";
     // char ch;
     // while (read(ch, '.')) cout << ch;
-    // cout << "." << endl;
+    //  cout << "." << endl;
 
     return 0;
 }
