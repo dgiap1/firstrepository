@@ -15,22 +15,30 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Place your function definitions in this file.
 bool read(const string& a, int& b, bool c)
 {
-    return true;
+    bool result = false;
+    if (isdigit(b))
+    {
+        result = true;
+    }
+    return result;
 }
 
 bool read(const string& a, double& b, bool c)
 {
-    return true;
+    bool result = true;
+    return result;
 }
 
 bool read(const string& a, string& b, bool c)
 {
-    return true;
+    bool result = true;
+    return result;
 }
 
 bool read(char& a, char b)
 {
-    return true;
+    bool result = true;
+    return result;
 }
 
 ////////////////// STUDENT TESTING /////////////
