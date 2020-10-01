@@ -82,7 +82,8 @@ bool read(const string& prompt, string& name, bool truthValue)
 
 bool read(char& first, char sentinel)
 {
-    char ch = cin.get();
+    char ch = first;
+    cin.get();
     if (ch == sentinel)
     {
         return false;
