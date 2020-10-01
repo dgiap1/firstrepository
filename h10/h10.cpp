@@ -22,8 +22,9 @@ bool read(const string& a, int& b, bool c)
         if (!isdigit(ch))
         {
             result = false;
+            cin.get(ch);
+            cout.put(ch);
         }
-        cout.put(ch);
     }
     return result;
 }
