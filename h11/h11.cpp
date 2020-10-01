@@ -31,6 +31,11 @@ void strip()
             cin.get(ch);
             inMultiCmt = false;
         }
+        else if (inString && ch == '\\' && cin.peek() == '"')
+        {
+            cout.put(ch);
+            cin.get(ch);
+        }
         else if (!inString && !inSingleCmt && !inMultiCmt)
         {
             if (ch == '"')
