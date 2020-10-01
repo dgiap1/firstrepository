@@ -71,7 +71,10 @@ bool read(const string& prompt, string& name, bool truthValue)
     }
     else
     {
-        getline(cin, name);
+        if (truthValue)
+        {
+            getline(cin, name);
+        }
         return true;
     }
     return false;
