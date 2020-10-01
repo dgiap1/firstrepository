@@ -16,10 +16,28 @@ void expense()
     char ch;
     while(cin.get(ch))
     {
-        if (isdigit(cin.peek()))
+        if ((ch == ' ') && (cin.peek() == ' '))
         {
-            cout.put(ch);
+            cin.get(ch);
         }
+        else if ((ch == ' ') && (isdigit(cin.peek())))
+        {
+            break;
+        }
+        cout.put(ch);
+        double total = 0.0;
+        while (ch != '\\' && cin.peek() != 'n')
+        {
+            if (isdigit(cin.peek()))
+            {
+                total += 1;
+            }
+            else
+            {
+                cout.put(ch);
+            }
+        }
+        cout.put(ch);
     }
 }
 
