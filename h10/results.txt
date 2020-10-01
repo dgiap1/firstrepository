@@ -1,0 +1,35 @@
+INSTRUCTOR TESTING H10--dgiap1
+----------------------------------------------------------------------
+Checking function: read with int -------------------
+   + Prompt printed->How old are you? 
+   + Bad input checked
+   + Age set correctly->42
+   + Good input checked
+   + Trailing input retained
+----------------------------------------------------------------------
+  Tests passing 5/5 (100%).
+
+Checking function: read (with double) -------------------
+   + Prompt printed->What is your gpa? 
+   + Bad input checked
+   + GPA set correctly
+   + Good input checked
+   + Trailing input discarded
+----------------------------------------------------------------------
+  Tests passing 5/5 (100%).
+
+Checking function: read (with string) -------------------
+   + Prompt printed->What is your full name? 
+   + Reads whole name->Stephen Dean Gilbert
+   X Reads one word: Incorrect [mordoch]
+Checking function: read (with string) -------------------
+   + Read sentinel, return false
+   + Not sentinel, return true
+   + Correctly set ch when reading->43
+----------------------------------------------------------------------
+  Tests passing 3/3 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H10:dgiap1: ALL TESTS -- PASS 13/13 (100%).
+----------------------------------------------------------------------
+MTYwMTU5MzgzODpkZ2lhcDE6SDEwOjEwMC4wMCU=
