@@ -46,6 +46,7 @@ bool read(char& a, char b)
     {
         result = true;
     }
+    cout << a << endl;
     return result;
 }
 
