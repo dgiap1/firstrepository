@@ -51,7 +51,10 @@ void strip()
                 inSingleCmt = true;
             }
         }
+        if(ch && !inSingleCmt && !inMultiCmt)
+        {
         cout.put(ch);
+        }
     }
 }
 
