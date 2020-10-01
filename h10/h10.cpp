@@ -16,6 +16,7 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 bool read(const string& prompt, int& age, bool truthValue)
 {
     cout << prompt << age << endl;
+    cin >> age;
     if(cin.fail())
     {
         string junk;
