@@ -30,6 +30,8 @@ void strip()
         {
             cin.get(ch);
             inMultiCmt = false;
+            cin.get(ch);
+            cin.get(ch);
         }
         else if (inString && ch == '\\' && cin.peek() == '"')
         {
