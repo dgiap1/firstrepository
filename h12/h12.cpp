@@ -37,14 +37,20 @@ void expense()
     cout << ", ";
 
     double total = 0.0;
-    double temp = 0.0;
-    while(cin.get(ch) && cin.peek() != '\n')
+    double nextChar = 0.0;
+    while(cin.get(ch))
     {
         if(isdigit(cin.peek()))
         {
             cin.unget();
-            cin >> temp;
-            total += temp;
+            cin >> nextChar;
+            total += nextChar;
+        }
+        
+        if (ch == '\n')
+        {
+            cin.unget();
+            break;
         }
     }
 cout << fixed << setprecision(2) << total << "\n";
