@@ -59,5 +59,6 @@ void strip()
 int run()
 {
     //cout << "Student testing" << endl;
+    strip();
     return 0;
 }
