@@ -37,10 +37,14 @@ bool read(const string& a, string& b, bool c)
 
 bool read(char& a, char b)
 {
-    bool result = true;
+    bool result;
     if (a == b)
     {
         result = false;
+    }
+    else
+    {
+        result = true;
     }
     return result;
 }
