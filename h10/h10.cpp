@@ -48,6 +48,7 @@ bool read(const string& prompt, double& gpa, bool truthValue)
 
 bool read(const string& prompt, string& name, bool truthValue)
 {
+    cout << prompt;
     string str = " ";
     getline(cin, name);
 
