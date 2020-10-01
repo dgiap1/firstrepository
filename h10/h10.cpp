@@ -15,24 +15,25 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Place your function definitions in this file.
 bool read(const string& a, int& b, bool c)
 {
-    char ch;
     bool result = true;
-    while(cin.get(ch))
-    {
-        if (!isdigit(ch))
-        {
-            result = false;
-            cin.get(ch);
-            cout.put(ch);
-        }
-    }
     return result;
 }
 
-bool read(const string& a, double& b, bool c)
+bool read(const string& prompt, double& gpa, bool truthValue)
 {
-    bool result = true;
-    return result;
+    cout << prompt;
+    cin >> gpa;
+    if(cin.fail())
+    {
+        cin.ignore(1024, '\n');
+        cin.clear();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+    return false;
 }
 
 bool read(const string& a, string& b, bool c)
