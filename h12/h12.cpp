@@ -16,7 +16,7 @@ void expense()
     char ch;
     while(cin.get(ch) && cin.peek())
     {
-        if ((ch == ' ') && (cin.peek() == ' '))
+        if (ch == ' ' && cin.peek() == ' ')
         {
             continue;
         }
@@ -31,7 +31,7 @@ void expense()
         }
         else
         {
-            cout.put(ch);
+            cout << ch;
         }
     }
     cout << ", ";
@@ -46,14 +46,8 @@ void expense()
             cin >> nextChar;
             total += nextChar;
         }
-        
-        if (ch == '\n')
-        {
-            cin.unget();
-            break;
-        }
     }
-cout << fixed << setprecision(2) << total << "\n";
+    cout << fixed << setprecision(2) << total << "\n";
 }
 
 
