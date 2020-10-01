@@ -33,14 +33,13 @@ bool read(const string& a, string& b, bool c)
 
 bool read(char& a, char b)
 {
-    char ch;
     bool result = true;
-    while(cin.get(ch))
+    while(cin.get(a))
     {
-        if (ch == b)
+        if (a == b)
         {
             result = false;
-            cout.put(ch);
+            cout.put(a);
         }
     }
     return result;
