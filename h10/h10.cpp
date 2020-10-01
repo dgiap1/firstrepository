@@ -22,7 +22,8 @@ bool read(const string& a, int& b, bool c)
 bool read(const string& prompt, double& gpa, bool truthValue)
 {
     cout << prompt;
-    cin >> gpa;
+    string junk;
+    cin >> junk;
     if(cin.fail())
     {
         cin.ignore(1024, '\n');
