@@ -61,17 +61,20 @@ bool read(const string& prompt, string& name, bool truthValue)
 {
     cout << prompt;
     string str = " ";
-    getline(cin, name);
 
-    if (false)
+    if (cin.fail())
     {
+        string junk;
+        cin >> junk;
         cin.clear();
         return false;
     }
     else
     {
+        getline(cin, name);
         return true;
     }
+    return false;
 }
 
 bool read(char& first, char sentinel)
