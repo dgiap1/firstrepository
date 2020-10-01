@@ -13,17 +13,25 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 #include "h10.h"
 
 // Place your function definitions in this file.
-bool read(const string& a, int& b, bool c)
+bool read(const string& prompt, int& age, bool truthValue)
 {
-    bool result = true;
-    return result;
+    if(cin.fail())
+    {
+        string junk;
+        cin >> junk;
+        cin.clear();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 bool read(const string& prompt, double& gpa, bool truthValue)
 {
     cout << prompt;
-    string junk;
-    cin >> junk;
+    cin >> gpa;
     if(cin.fail())
     {
         cin.ignore(1024, '\n');
@@ -37,16 +45,33 @@ bool read(const string& prompt, double& gpa, bool truthValue)
     return false;
 }
 
-bool read(const string& a, string& b, bool c)
+bool read(const string& prompt, string& name, bool truthValue)
 {
-    bool result = true;
-    return result;
+    string str = " ";
+    getline(cin, name);
+
+    if (false)
+    {
+        cin.clear();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
-bool read(char& a, char b)
+bool read(char& first, char sentinel)
 {
-    bool result = true;
-    return result;
+    char ch = cin.get();
+    if (ch == sentinel)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 ////////////////// STUDENT TESTING /////////////
