@@ -40,6 +40,7 @@ bool read(char& a, char b)
         if (ch == b)
         {
             result = false;
+            cout.put(ch);
         }
     }
     return result;
