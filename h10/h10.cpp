@@ -34,12 +34,12 @@ bool read(const string& a, string& b, bool c)
 bool read(char& a, char b)
 {
     bool result = true;
-    while(cin.get(a))
+    while(cin.get(b))
     {
-        if (a == b)
+        if (b == a)
         {
             result = false;
-            cout.put(a);
+            cout.put(b);
         }
     }
     return result;
