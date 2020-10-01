@@ -31,6 +31,7 @@ bool read(const string& prompt, int& age, bool truthValue)
         }
         return true;
     }
+    return false;
 }
 
 bool read(const string& prompt, double& gpa, bool truthValue)
