@@ -14,33 +14,41 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 void expense()
 {
     char ch;
-    while(cin.get(ch))
+    while(cin.get(ch) && cin.peek())
     {
         if ((ch == ' ') && (cin.peek() == ' '))
         {
-            cin.get(ch);
+            continue;
         }
-        else if ((ch == ' ') && (isdigit(cin.peek())))
+        else if (isdigit(ch))
         {
+            cin.unget();
             break;
         }
-        cout.put(ch);
-        double total = 0.0;
-        while (ch != '\\' && cin.peek() != 'n')
+        else if (ch != ' ' && isdigit(cin.peek()))
         {
-            if (isdigit(cin.peek()))
-            {
-                total += 1;
-            }
-            else
-            {
-                cout.put(ch);
-            }
+            continue;
         }
-        cout.put(ch);
+        else
+        {
+            cout.put(ch);
+        }
     }
-}
+    cout << ", ";
 
+    double total = 0.0;
+    double temp = 0.0;
+    while(cin.get(ch) && cin.peek() != '\n')
+    {
+        if(isdigit(cin.peek()))
+        {
+            cin.unget();
+            cin >> temp;
+            total += temp;
+        }
+    }
+cout << fixed << setprecision(2) << total << "\n";
+}
 
 
 //////////////// STUDENT TESTING ////////////////////
