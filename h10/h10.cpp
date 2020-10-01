@@ -38,6 +38,10 @@ bool read(const string& a, string& b, bool c)
 bool read(char& a, char b)
 {
     bool result = true;
+    if (a == b)
+    {
+        result = false;
+    }
     return result;
 }
 
