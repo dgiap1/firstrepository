@@ -25,6 +25,10 @@ bool read(const string& prompt, int& age, bool truthValue)
     }
     else
     {
+        if (truthValue)
+        {
+            cin.ignore(1024, '\n');
+        }
         return true;
     }
 }
