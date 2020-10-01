@@ -35,12 +35,17 @@ bool read(const string& prompt, double& gpa, bool truthValue)
     cin >> gpa;
     if(cin.fail())
     {
-        cin.ignore(1024, '\n');
+        string junk;
+        cin >> junk;
         cin.clear();
         return false;
     }
     else
     {
+        if (truthValue)
+        {
+            cin.ignore(1024, '\n');
+        }
         return true;
     }
     return false;
