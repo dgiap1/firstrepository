@@ -28,8 +28,8 @@ void strip()
         }
         else if (inMultiCmt && ch == '*' && cin.peek() == '/')
         {
-            cin.get(ch);
             inMultiCmt = false;
+            cin.get(ch);
         }
         else if (inString && ch == '\\' && cin.peek() == '"')
         {
