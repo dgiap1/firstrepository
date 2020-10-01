@@ -13,6 +13,11 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Write your function here
 void expense()
 {
+    char ch;
+    while(cin.get(ch))
+    {
+        cout.put(ch);
+    }
 }
 
 
