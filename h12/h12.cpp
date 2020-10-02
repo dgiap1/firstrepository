@@ -14,7 +14,7 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 void expense()
 {
     char ch;
-    while(cin.get(ch) && cin.peek() != '\n')
+    while(cin.get(ch) && cin.peek())
     {
         if (ch == ' ' && cin.peek() == ' ')
         {
