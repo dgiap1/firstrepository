@@ -26,6 +26,7 @@ void expense()
         }
         else if (isdigit(ch))
         {
+            cin.unget();
             break;
         }
         else
