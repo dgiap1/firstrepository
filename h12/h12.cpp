@@ -49,6 +49,7 @@ void expense()
         if (ch == '\n')
         {
             cin.unget();
+            cin.unget();
             break;
         }
     }
