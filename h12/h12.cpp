@@ -40,7 +40,7 @@ void expense()
     double nextChar = 0.0;
     while(cin.get(ch))
     {
-        if(isdigit(cin.peek()) && cin.peek() != '\n')
+        if(isdigit(cin.peek()) && cin.peek() && cin.peek() != '\n')
         {
             cin.unget();
             cin >> nextChar;
