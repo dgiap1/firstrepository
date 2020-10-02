@@ -40,15 +40,11 @@ void expense()
     double nextChar = 0.0;
     while(cin.get(ch))
     {
-        if(isdigit(cin.peek()))
+        if(isdigit(cin.peek()) && cin.peek() != '\n')
         {
             cin.unget();
             cin >> nextChar;
             total += nextChar;
-        }
-        if (ch == '\n')
-        {
-            break;
         }
     }
     cout << fixed << setprecision(2) << total << "\n";
