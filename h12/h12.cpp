@@ -20,6 +20,10 @@ void expense()
         {
             continue;
         }
+        else if (ch == ' ' && isdigit(cin.peek()))
+        {
+            continue;
+        }
         else if (isdigit(ch))
         {
             cin.unget();
