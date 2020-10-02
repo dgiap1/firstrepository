@@ -43,13 +43,13 @@ void expense()
         if(isdigit(cin.peek()))
         {
             cin.unget();
-            cin.unget();
             cin >> nextChar;
             total += nextChar;
         }
         if (ch == '\n')
         {
             break;
+            cin.unget();
         }
     }
     cout << fixed << setprecision(2) << total << "\n";
