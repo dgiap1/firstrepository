@@ -38,9 +38,9 @@ void expense()
 
     double total = 0.0;
     double nextChar = 0.0;
-    while(cin.get(ch))
+    while(cin.get(ch) && cin.peek() != '\n')
     {
-        if(isdigit(cin.peek()) && cin.peek() && cin.peek() != '\n')
+        if(isdigit(cin.peek()))
         {
             cin.unget();
             cin >> nextChar;
