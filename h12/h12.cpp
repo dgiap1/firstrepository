@@ -48,7 +48,7 @@ void expense()
         }
         else
         {
-            cin.unget();
+            cout << ch;
             break;
         }
     }
