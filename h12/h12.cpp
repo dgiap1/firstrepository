@@ -42,8 +42,8 @@ void expense()
     {
         if(isdigit(cin.peek()))
         {
-            cin.unget();
             cin >> nextChar;
+            cin.unget();
             total += nextChar;
         }
     }
