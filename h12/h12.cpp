@@ -26,7 +26,6 @@ void expense()
         }
         else if (isdigit(ch))
         {
-            cin.unget();
             break;
         }
         else
@@ -45,6 +44,10 @@ void expense()
             cin.unget();
             cin >> nextChar;
             total += nextChar;
+        }
+        if (ch == '\n')
+        {
+            break;
         }
     }
     cout << fixed << setprecision(2) << total << "\n";
