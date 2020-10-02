@@ -27,11 +27,11 @@ void expense()
         }
         else if (ch == ' ' && isdigit(cin.peek()))
         {
+            cin.unget();
             continue;
         }
         else
         {
-            cin.unget();
             cout << ch;
         }
     }
