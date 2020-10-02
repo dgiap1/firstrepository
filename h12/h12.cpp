@@ -49,7 +49,6 @@ void expense()
         if (ch == '\n')
         {
             break;
-            cin.unget();
         }
     }
     cout << fixed << setprecision(2) << total << "\n";
