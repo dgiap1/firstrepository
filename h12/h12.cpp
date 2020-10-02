@@ -46,11 +46,6 @@ void expense()
             cin >> nextChar;
             total += nextChar;
         }
-        else
-        {
-            cout << ch;
-            break;
-        }
     }
     cout << fixed << setprecision(2) << total << "\n";
 }
