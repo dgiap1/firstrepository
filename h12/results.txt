@@ -1,0 +1,15 @@
+TESTING H12--dgiap1
+----------------------------------------------------------------------
+Checking function: Checking the expense filter. -------------------
+   + Simple name and numbers:: Success
+   X Two word name, simple numbers: expected [Jack Reacher, 22.45\n] but found [Jack Reacher, 19.45\n]
+   X Multiple lines: expected [Sally, 22.00\nSimone, 55.30\n] but found [Sally, 18.00\n]
+   + Multiple white space in name: Success
+   + Notes in the expense list: Success
+----------------------------------------------------------------------
+  Tests passing 3/5 (60%).
+
+----------------------------------------------------------------------
+H12:dgiap1:ALL TESTS -- PASS 3/5 (60%).
+----------------------------------------------------------------------
+MTYwMTU5ODk2MTpkZ2lhcDE6SDEyOjYwLjAwJQ==
