@@ -1,0 +1,40 @@
+TESTING H13--dgiap1
+----------------------------------------------------------------------
+Checking function: dataSets -------------------
+   + data/ds0.txt output lines->0->0
+   + data/notfound.txt output lines->1->1
+   + Line #1.->data/notfound.txt cannot be opened.
+   + data/ds12.txt output lines->8->8
+   + Line #1.->data set 1: total values = 9
+   + Line #2.->average value = 8.7000
+   + Line #3.->
+   + Line #4.->data set 2: total values = 18
+   + Line #5.->average value = 6.5722
+   + data/ds1.txt output lines->2->2
+   + Line #1.->data set 1: total values = 19
+   + Line #2.->average value = 5.4632
+   + data/ds7.txt output lines->20->20
+   + Line #1.->data set 1: total values = 9
+   + Line #2.->average value = 8.3333
+   + Line #3.->
+   + Line #4.->data set 2: total values = 7
+   + Line #5.->average value = 1.7000
+   + data/ds5.txt output lines->14->14
+   + Line #1.->data set 1: total values = 21
+   + Line #2.->average value = 2.7571
+   + Line #3.->
+   + Line #4.->data set 2: total values = 9
+   + Line #5.->average value = 6.4667
+   + data/ds11.txt output lines->5->5
+   + Line #1.->data set 1: total values = 7
+   + Line #2.->average value = 5.2429
+   + Line #3.->
+   + Line #4.->data set 2: total values = 8
+   + Line #5.->average value = 6.7000
+----------------------------------------------------------------------
+  Tests passing 30/30 (100%).
+
+----------------------------------------------------------------------
+H13:dgiap1:ALL TESTS -- PASS 30/30 (100%).
+----------------------------------------------------------------------
+MTYwMTkzNTgzNzpkZ2lhcDE6SDEzOjEwMC4wMCU=
