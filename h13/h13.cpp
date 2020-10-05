@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Derek Giap
+ *  @date 10/05/2020
  *  @file h13.cpp
  */
 #include <string>
@@ -10,7 +10,7 @@
 #include <iomanip>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 #include "h13.h"
 
