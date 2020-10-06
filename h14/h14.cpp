@@ -17,6 +17,8 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 string getLine(const string& prompt)
 {
     string newPrompt = prompt;
+    string userInput;
+    cin >> userInput;
     if (! prompt.empty())
     {
         if (newPrompt.back() != ' ')
@@ -25,7 +27,7 @@ string getLine(const string& prompt)
         }
         cout << newPrompt << endl;
     }
-    return newPrompt;
+    return userInput;
 }
 
 
