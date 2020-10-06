@@ -41,7 +41,7 @@ int getInt(const string& prompt)
             istringstream in(userInput);
             int n;
             in >> n;
-            if (in && in.eof())
+            if (in.eof() && ! in.fail())
             {
                 return n;
             }
