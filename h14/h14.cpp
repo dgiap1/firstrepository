@@ -7,6 +7,7 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <cctype>
 using namespace std;
 
 string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
@@ -15,7 +16,17 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 string getLine(const string& prompt)
 {
-    return prompt;
+    string newPrompt = prompt;
+    if (prompt.empty())
+    {
+        
+    }
+    if (newPrompt.back() != ' ')
+    {
+        newPrompt += ' ';
+    }
+    cout << newPrompt << endl;
+    return newPrompt;
 }
 int getInt(const string& prompt)
 {
