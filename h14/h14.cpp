@@ -52,6 +52,7 @@ int getInt(const string& prompt)
             }
         }
         throw "Invalid Input.";
+        userInput = getLine(prompt);
     }
 }
 
