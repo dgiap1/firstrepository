@@ -33,7 +33,21 @@ string getLine(const string& prompt)
 
 int getInt(const string& prompt)
 {
-    return 5;
+    string userInput = getLine(prompt);
+    while (true)
+    {
+        if (! userInput.empty())
+        {
+            istringstream in(userInput);
+            int n;
+            in >> n;
+            if (in && in.eof())
+            {
+                return n;
+            }
+        throw "Invalid Input.";
+        }
+    }
 }
 
 
