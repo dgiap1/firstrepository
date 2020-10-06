@@ -58,26 +58,7 @@ int getInt(const string& prompt)
 
 double getReal(const string& prompt)
 {
-    string userInput = getLine(prompt);
-    while (true)
-    {
-        if (! userInput.empty())
-        {
-            istringstream in(userInput);
-            double n;
-            in >> n;
-            if (in.eof() && ! in.fail())
-            {
-                return n;
-            }
-            in >> ws;
-            if (in.eof() && ! in.fail())
-            {
-                return n;
-            }
-        }
-        throw "Invalid Input.";
-    }
+    return 5.0;
 }
 
 
