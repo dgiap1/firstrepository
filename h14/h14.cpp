@@ -43,11 +43,12 @@ int getInt(const string& prompt)
             in >> n;
             if (in.eof() && ! in.fail())
             {
-                in >> ws;
-                if (in.eof() && ! in.fail())
-                {
-                    return n;
-                }
+                return n;
+            }
+            in >> ws;
+            if (in.eof() && ! in.fail())
+            {
+                return n;
             }
         }
         throw "Invalid Input.";
