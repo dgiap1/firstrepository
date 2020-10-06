@@ -44,9 +44,14 @@ int getInt(const string& prompt)
             if (in.eof() && ! in.fail())
             {
                 return n;
+                in >> ws;
+                if (in.eof() && ! in.fail())
+                {
+                    return n;
+                }
             }
-            throw "Invalid Input.";
         }
+        throw "Invalid Input.";
     }
 }
 
