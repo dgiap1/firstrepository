@@ -18,7 +18,7 @@ string getLine(const string& prompt)
 {
     string newPrompt = prompt;
     string userInput;
-    cin >> userInput;
+    getline(cin, userInput);
     if (! prompt.empty())
     {
         if (newPrompt.back() != ' ')
