@@ -43,7 +43,6 @@ int getInt(const string& prompt)
             in >> n;
             if (in.eof() && ! in.fail())
             {
-                return n;
                 in >> ws;
                 if (in.eof() && ! in.fail())
                 {
