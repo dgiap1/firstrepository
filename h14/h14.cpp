@@ -25,7 +25,7 @@ string getLine(const string& prompt)
         {
             newPrompt += ' ';
         }
-        cout << newPrompt << endl;
+        cout << newPrompt;
     }
     return userInput;
 }
