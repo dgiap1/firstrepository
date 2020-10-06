@@ -17,25 +17,30 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 string getLine(const string& prompt)
 {
     string newPrompt = prompt;
-    if (prompt.empty())
+    if (! prompt.empty())
     {
-        
+        if (newPrompt.back() != ' ')
+        {
+            newPrompt += ' ';
+        }
+        cout << newPrompt << endl;
     }
-    if (newPrompt.back() != ' ')
-    {
-        newPrompt += ' ';
-    }
-    cout << newPrompt << endl;
     return newPrompt;
 }
+
+
 int getInt(const string& prompt)
 {
     return 5;
 }
+
+
 double getReal(const string& prompt)
 {
     return 5.0;
 }
+
+
 bool getYN(const string& prompt)
 {
     return true;
