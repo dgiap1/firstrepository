@@ -94,19 +94,9 @@ bool getYN(const string& prompt)
             istringstream in(userInput);
             string n;
             in >> n;
-            if (userInput == "Y" || userInput == "y")
+            if (in.eof() && !in.fail())
             {
-                if (in.eof() && !in.fail())
-                {
-                    return true;
-                }
-            }
-            else if (userInput == "N" || userInput == "n")
-            {
-                if (in.eof() && !in.fail())
-                {
-                return false;
-                }
+                return true;
             }
         }
         cout << "Error: Invalid input" << endl;
