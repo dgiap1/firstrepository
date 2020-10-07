@@ -8,6 +8,7 @@
 #include <sstream>
 #include <iomanip>
 #include <cctype>
+#include <stdexcept>
 using namespace std;
 
 string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
@@ -46,6 +47,7 @@ int getInt(const string& prompt)
             {
                 return n;
             }
+        throw invalid_argument("Not an int.");
         }
     }
 }
