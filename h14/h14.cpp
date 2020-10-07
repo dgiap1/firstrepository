@@ -51,10 +51,7 @@ int getInt(const string& prompt)
                 return n;
             }
         }
-        else
-        {
-            throw "Invalid Input";
-        }
+        throw "Invalid Input.";
     }
 }
 
