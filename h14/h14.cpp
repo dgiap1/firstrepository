@@ -51,7 +51,10 @@ int getInt(const string& prompt)
                 return n;
             }
         }
-        throw "Invalid Input."; // Display an error message, clear input, read another
+        else
+        {
+            throw "Invalid Input";
+        }
     }
 }
 
