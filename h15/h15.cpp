@@ -4,7 +4,6 @@
  *  @file h15.cpp
  */
 #include <string>
-#include <sstream>
 using namespace std;
 
 string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
