@@ -42,6 +42,10 @@ int getInt(const string& prompt)
             istringstream in(userInput);
             int n;
             in >> n;
+            if (in.eof() && ! in.fail())
+            {
+                return n;
+            }
             in >> ws;
             if (in.eof() && ! in.fail())
             {
