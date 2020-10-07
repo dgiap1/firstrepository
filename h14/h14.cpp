@@ -96,7 +96,7 @@ bool getYN(const string& prompt)
             in >> n;
             if (in.eof() && !in.fail())
             {
-                if (userInput[0] == ('Y' || 'y'))
+                if (userInput[0] == 'Y' || userInput[0] == 'y')
                 {
                     return true;
                 }
