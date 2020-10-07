@@ -100,7 +100,7 @@ bool getYN(const string& prompt)
                 {
                     return true;
                 }
-                else
+                else if (userInput[0] == 'N' || userInput[0] == 'n')
                 {
                     return false;
                 }
@@ -112,7 +112,7 @@ bool getYN(const string& prompt)
                 {
                     return true;
                 }
-                else
+                else if (userInput[0] == 'N' || userInput[0] == 'n')
                 {
                     return false;
                 }
