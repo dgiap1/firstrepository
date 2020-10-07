@@ -52,7 +52,7 @@ int getInt(const string& prompt)
                 return n;
             }
         }
-        cout << "Error: Not an Int" << endl;
+        cout << "Error: Not an int" << endl;
         userInput = getLine(prompt);
     }
 }
@@ -60,8 +60,27 @@ int getInt(const string& prompt)
 
 double getReal(const string& prompt)
 {
-    // Same as getInt but as a double
-    return 5.0;
+    string userInput = getLine(prompt);
+    while (true)
+    {
+        if (! userInput.empty())
+        {
+            istringstream in(userInput);
+            double n;
+            in >> n;
+            if (in.eof() && ! in.fail())
+            {
+                return n;
+            }
+            in >> ws;
+            if (in.eof() && ! in.fail())
+            {
+                return n;
+            }
+        }
+        cout << "Error: Not a double" << endl;
+        userInput = getLine(prompt);
+    }
 }
 
 
