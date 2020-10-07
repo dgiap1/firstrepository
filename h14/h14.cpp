@@ -47,7 +47,6 @@ int getInt(const string& prompt)
             {
                 return n;
             }
-        throw invalid_argument("Not an int.");
         }
     }
 }
