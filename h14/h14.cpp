@@ -41,11 +41,12 @@ int getInt(const string& prompt)
             istringstream in(userInput);
             int n;
             in >> n;
-            if (in.fail() || !in.eof())
+            if (in.eof() && ! in.fail())
             {
-                throw "Invalid Input.";
+                return n;
             }
-            else
+            in >> ws;
+            if (in.eof() && ! in.fail())
             {
                 return n;
             }
