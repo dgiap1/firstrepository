@@ -46,10 +46,6 @@ int getInt(const string& prompt)
                 return n;
             }
             in >> ws;
-            if (in.eof() && ! in.fail())
-            {
-                return n;
-            }
         }
     }
 }
