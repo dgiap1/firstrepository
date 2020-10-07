@@ -20,7 +20,7 @@ string getLine(const string& prompt)
     string newPrompt = prompt;
     string userInput;
     getline(cin, userInput);
-    if (! prompt.empty())
+    if (!prompt.empty())
     {
         if (newPrompt.back() != ' ')
         {
@@ -37,17 +37,17 @@ int getInt(const string& prompt)
     string userInput = getLine(prompt);
     while (true)
     {
-        if (! userInput.empty())
+        if (!userInput.empty())
         {
             istringstream in(userInput);
             int n;
             in >> n;
-            if (in.eof() && ! in.fail())
+            if (in.eof() && !in.fail())
             {
                 return n;
             }
             in >> ws;
-            if (in.eof() && ! in.fail())
+            if (in.eof() && !in.fail())
             {
                 return n;
             }
@@ -63,17 +63,17 @@ double getReal(const string& prompt)
     string userInput = getLine(prompt);
     while (true)
     {
-        if (! userInput.empty())
+        if (!userInput.empty())
         {
             istringstream in(userInput);
             double n;
             in >> n;
-            if (in.eof() && ! in.fail())
+            if (in.eof() && !in.fail())
             {
                 return n;
             }
             in >> ws;
-            if (in.eof() && ! in.fail())
+            if (in.eof() && !in.fail())
             {
                 return n;
             }
@@ -89,12 +89,15 @@ bool getYN(const string& prompt)
     string userInput = getLine(prompt);
     while (true)
     {
-        istringstream in(userInput);
-        string n;
-        in >> n;
-        if (in.eof() && ! in.fail())
+        if (!userInput.empty())
         {
-            return true;
+            istringstream in(userInput);
+            string n;
+            in >> n;
+            if (in.eof() && !in.fail())
+            {
+                return true;
+            }
         }
         cout << "Error: Invalid input" << endl;
         userInput = getLine(prompt);
