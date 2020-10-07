@@ -17,7 +17,7 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 string getLine(const string& prompt)
 {
-/*    string newPrompt = prompt;
+    string newPrompt = prompt;
     string userInput;
     getline(cin, userInput);
     if (! prompt.empty())
@@ -28,14 +28,13 @@ string getLine(const string& prompt)
         }
         cout << newPrompt;
     }
-    return userInput;*/
-    return "lol";
+    return userInput;
 }
 
 
 int getInt(const string& prompt)
 {
-/*    string userInput = getLine(prompt);
+    string userInput = getLine(prompt);
     while (true)
     {
         if (! userInput.empty())
@@ -49,8 +48,9 @@ int getInt(const string& prompt)
                 return n;
             }
         }
-    }*/
-    return 0;
+        cout << "Error: Not an Int" << endl;
+        userInput = getLine(prompt);
+    }
 }
 
 
