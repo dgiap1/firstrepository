@@ -51,14 +51,14 @@ int getInt(const string& prompt)
                 return n;
             }
         }
-        throw "Invalid Input.";
-        userInput = getLine(prompt);
+        throw "Invalid Input."; // Display an error message, clear input, read another
     }
 }
 
 
 double getReal(const string& prompt)
 {
+    // Same as getInt but as a double
     return 5.0;
 }
 
