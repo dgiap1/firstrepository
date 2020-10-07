@@ -104,6 +104,15 @@ bool getYN(const string& prompt)
                 {
                     return false;
                 }
+                in >> ws;
+                if (userInput[0] == 'Y' || userInput[0] == 'y')
+                {
+                    return true;
+                }
+                else if (userInput[0] == 'N' || userInput[0] == 'n')
+                {
+                    return false;
+                }
             }
         }
         cout << "Error: Invalid input" << endl;
