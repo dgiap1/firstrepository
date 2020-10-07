@@ -86,7 +86,19 @@ double getReal(const string& prompt)
 
 bool getYN(const string& prompt)
 {
-    return true;
+    string userInput = getLine(prompt);
+    while (true)
+    {
+        istringstream in(userInput);
+        string n;
+        in >> n;
+        if (in.eof() && ! in.fail())
+        {
+            return true;
+        }
+        cout << "Error: Invalid input" << endl;
+        userInput = getLine(prompt);
+    }
 }
 
 /////////////// STUDENT TESTING ////////////////////
