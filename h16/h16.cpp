@@ -14,7 +14,9 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 void get(istream& in, Point& p)
 {
     char ch;
-    in >> p.x >> ch >> p.y;
+    in >> p.x;
+    in.get(ch);
+    in >> p.y;
 }
 
 void print(ostream& out, const Point& p)
