@@ -7,14 +7,13 @@
 #include <cmath>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 #include "h16.h"
 // Add your implementation here
 void get(istream& in, Point& p)
 {
     char ch;
-    cout << "Enter Point x, y: ";
     in >> p.x >> ch >> p.y;
 }
 
