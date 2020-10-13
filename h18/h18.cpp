@@ -73,11 +73,8 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             {
                 continue;
             }
-            else
-            {
-                Word misspelled = {tempWord, wordPos};
-                results.push_back(misspelled);
-            }
+            Word misspelled = {tempWord, wordPos};
+            results.push_back(misspelled);
         }
     }
     return results;
