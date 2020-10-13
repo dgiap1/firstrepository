@@ -26,4 +26,4 @@ Checking function: Triangle Structure -------------------
 ----------------------------------------------------------------------
 H16:dgiap1:ALL TESTS -- PASS 15/15 (100%).
 ----------------------------------------------------------------------
-MTYwMjYyMTc5ODpkZ2lhcDE6SDE2OjEwMC4wMCU=
+MTYwMjYyMzEyMDpkZ2lhcDE6SDE2OjEwMC4wMCU=
