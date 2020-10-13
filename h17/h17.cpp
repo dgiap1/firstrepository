@@ -20,19 +20,18 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 vector<string> fileToWords(const string& filename)
 {
 
-    ifstream in(filename);
-    if(! in.is_open())
+    ifstream in(filename);                                  // Open an input file, using the file name
+    if(! in.is_open())                                      // If it can't be opened Then
     {
-        throw invalid_argument("Exception: Invalid File");
+        throw invalid_argument("Exception: Invalid File");  // Throw invalid_argument exception
     }
-    vector<string> results;
+    vector<string> results;                                 // Create an empty vector of string (results)
     string line;
-    while (! in.eof())
+    while (getline(in, line))                                      // Read the input until end of file (getline)
     {
-        getline(in, line);
-        results.push_back(line);
+        results.push_back(line);                            // Store each word in the vector (push_back)
     }
-    return results;
+    return results;                                         // Return the results vector
 }
 
 
