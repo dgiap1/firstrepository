@@ -28,6 +28,10 @@ string clean(string& str)
             str.erase(i, 1);
             len--;
         }
+        else if (isalpha(str[i]))
+        {
+            tolower(str[i]);
+        }
         else
         {
             i++;
