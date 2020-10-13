@@ -50,32 +50,33 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         vector<pos_type> wordPos;
         in >> tempWord >> ws;
         tempWord = clean(tempWord);
-        for (auto& e : results)
+        
+        for (auto& e : results) // Search results for word
         {
-            if (tempWord == e.word)
+            if (tempWord == e.word) // If word found
             {
-                e.positions.push_back(currentPosition);
-                continue;
+                e.positions.push_back(currentPosition); // Then add position to element in results
+                continue; // Continue (next iteration)
             }
         }
 
-        for (auto& e : excluded)
+        for (auto& e : excluded) // Search excluded words for word
         {
-            if (tempWord == e)
+            if (tempWord == e) // If word found
             {
-                continue;
+                continue; // Then continue (next iteration)
             }
         }
 
-        for (auto& e : dictionary)
+        for (auto& e : dictionary) // Search the dictionary for word
         {
-            if (tempWord == e)
+            if (tempWord == e) // If word found (Not misspelled)
             {
-                continue;
+                continue; // Then continue
             }
-            Word misspelled = {tempWord, wordPos};
-            results.push_back(misspelled);
         }
+        Word misspelled = {tempWord, wordPos};
+        results.push_back(misspelled);
     }
     return results;
 }
