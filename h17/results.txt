@@ -17,4 +17,4 @@ Checking function: fileToWords -------------------
 ----------------------------------------------------------------------
 H17:dgiap1:ALL TESTS -- PASS 7/7 (100%).
 ----------------------------------------------------------------------
-MTYwMjYyMzE5NDpkZ2lhcDE6SDE3OjEwMC4wMCU=
+MTYwMjYyMzI0MjpkZ2lhcDE6SDE3OjEwMC4wMCU=
