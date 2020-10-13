@@ -38,19 +38,19 @@ string clean(string& str)
 
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
-    vector<Word> results;
-    while(in)
+    vector<Word> results; // results: vector
+    while(in) // while in // not end of file
     {
-        pos_type currentPosition = in.tellg();
-        if(currentPosition == -1)
+        pos_type currentPosition = in.tellg(); // current-position <- in.tellg()
+        if(currentPosition == -1) // if current-position is -1 (at end of file)
         {
-            break;
+            break; // then exit the loop
         }
-        string tempWord;
+        string tempWord; // word: string
         vector<pos_type> wordPos;
-        in >> tempWord >> ws;
-        tempWord = clean(tempWord);
-        
+        in >> tempWord >> ws; // read next word (in >> word >> ws)
+        tempWord = clean(tempWord); // word <- clean(word) // lowercase, no punctuation
+
         for (auto& e : results) // Search results for word
         {
             if (tempWord == e.word) // If word found
@@ -75,10 +75,10 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
                 continue; // Then continue
             }
         }
-        Word misspelled = {tempWord, wordPos};
-        results.push_back(misspelled);
-    }
-    return results;
+        Word misspelled = {tempWord, wordPos}; // Create a new word, populate with word,position
+        results.push_back(misspelled); // Add new Word to results
+    } // End loop
+    return results; // Return results (misspelled words and their positions)
 }
 
 
