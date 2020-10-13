@@ -19,10 +19,11 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Implement the function here
 vector<string> fileToWords(const string& filename)
 {
+
     ifstream in(filename.c_str());
     if(! in.is_open())
     {
-        throw invalid_argument("Filename is Invalid.");
+        throw invalid_argument("Exception: Invalid File");
     }
     vector<string> results;
     string line;
