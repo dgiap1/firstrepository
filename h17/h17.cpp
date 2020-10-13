@@ -31,6 +31,7 @@ vector<string> fileToWords(const string& filename)
         getline(in, line);
         results.push_back(line);
     }
+    in.close();
     return results;
 }
 
