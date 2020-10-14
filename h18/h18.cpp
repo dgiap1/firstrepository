@@ -17,29 +17,6 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 // Place your function here
 
-string clean(string& str)
-{
-    size_t i = 0;
-    size_t len = str.length();
-    while (i < len)
-    {
-        if (! isalpha(str[i]) || (! isdigit(str[i])) || str[i] == ' ')
-        {
-            str.erase(i, 1);
-            len--;
-        }
-        else if (isalpha(str[i]))
-        {
-            tolower(str[i]);
-        }
-        else
-        {
-            i++;
-        }
-    }
-    return str;
-}
-
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
     vector<Word> results; // results: vector
@@ -50,10 +27,16 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             break; // then exit the loop
         }
-        string tempWord; // word: string
+        string tempWord, word; // word: string
         vector<pos_type> wordPos;
         in >> tempWord >> ws; // read next word (in >> word >> ws)
-        tempWord = clean(tempWord); // word <- clean(word) // lowercase, no punctuation
+        for (char ch : tempWord) // word <- clean(word) // lowercase, no punctuation
+        {
+            if (isalpha(ch) || isdigit(ch))
+            {
+                word += tolower(ch);
+            }
+        }
 
         for (auto& e : results) // Search results for word
         {
