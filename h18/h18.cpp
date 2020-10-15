@@ -26,8 +26,15 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         pos_type currentPosition = in.tellg(); // current-position <- in.tellg()
         if(currentPosition == -1) // if current-position is -1 (at end of file)
         {
+            flag = true;
             break; // then exit the loop
         }
+        
+        if (flag)
+        {
+            continue;
+        }
+        
         string tempWord, word; // word: string
         vector<pos_type> wordPos;
         in >> tempWord >> ws; // read next word (in >> word >> ws)
