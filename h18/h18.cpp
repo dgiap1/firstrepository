@@ -20,11 +20,11 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
     vector<Word> results;
     while (in)
     {
+        string tempWord, newWord;
+        vector<pos_type> wordPos;
         pos_type currentPos = in.tellg();
         if(currentPos == -1) {break;}
 
-        string tempWord, newWord;
-        vector<pos_type> wordPos;
         in >> tempWord >> ws;
 
         for (char ch : tempWord)
