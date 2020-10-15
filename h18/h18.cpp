@@ -19,39 +19,34 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
-    bool flag = false;
-    vector<Word> results; // results: vector
-    while(in) // while in // not end of file
+    vector<Word> results;
+    while(in)
     {
-        pos_type currentPosition = in.tellg(); // current-position <- in.tellg()
-        if(currentPosition == -1) // if current-position is -1 (at end of file)
+        pos_type currentPosition = in.tellg();
+        if(currentPosition == -1)
         {
-            flag = true;
-            break; // then exit the loop
+            break;
         }
+
         
-        if (flag)
-        {
-            continue;
-        }
-        
-        string tempWord, word; // word: string
+        string tempWord, word;
         vector<pos_type> wordPos;
-        in >> tempWord >> ws; // read next word (in >> word >> ws)
-        for (char ch : tempWord) // word <- clean(word) // lowercase, no punctuation
+        in >> tempWord >> ws;
+        for (char ch : tempWord)
         {
             if (isalpha(ch) || isdigit(ch))
             {
                 word += tolower(ch);
             }
         }
-
-        for (auto& e : results) // Search results for word
+        
+        bool flag = false;
+        for (auto& e : results)
         {
-            if (tempWord == e.word) // If word found
+            if (word == e.word)
             {
                 flag = true;
-                e.positions.push_back(currentPosition); // Then add position to element in results
+                e.positions.push_back(currentPosition);
                 break;
             }
         }
@@ -63,7 +58,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
 
         for (auto& e : excluded) // Search excluded words for word
         {
-            if (tempWord == e) // If word found
+            if (word == e) // If word found
             {
                 flag = true;
                 break;
@@ -77,7 +72,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
 
         for (auto& e : dictionary) // Search the dictionary for word
         {
-            if (tempWord == e) // If word found (Not misspelled)
+            if (word == e) // If word found (Not misspelled)
             {
                 flag = true;
                 break;
