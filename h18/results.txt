@@ -25,13 +25,13 @@ Checking function: spellCheck; Check words found. -------------------
   Tests passing 4/4 (100%).
 
 Checking function: spellCheck; Multiple misspellings. -------------------
-   X zots frog zots ape zots: found->{10, 19}: Failed
-   X frog frg frog frg frog: found->{14}: Failed
-   X a I cadillax: found->{}: Failed
+   + zots frog zots ape zots->{0, 10, 19}: Success
+   + frog frg frog frg frog->{5, 14}: Success
+   + a I cadillax->{4}: Success
 ----------------------------------------------------------------------
-  Tests passing 0/3 (0%).
+  Tests passing 3/3 (100%).
 
 ----------------------------------------------------------------------
-H18:dgiap1:ALL TESTS -- PASS 12/15 (80%).
+H18:dgiap1:ALL TESTS -- PASS 15/15 (100%).
 ----------------------------------------------------------------------
-MTYwMjc5MzYzMzpkZ2lhcDE6SDE4OjgwLjAwJQ==
+MTYwMjc5NTQ4OTpkZ2lhcDE6SDE4OjEwMC4wMCU=
