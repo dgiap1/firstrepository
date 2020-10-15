@@ -47,9 +47,10 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             }
         }
         if (flag) {continue;}
-        for (auto& e : excluded) // Search excluded words for word
+        
+        for (auto& e : excluded)
         {
-            if (word == e) // If word found
+            if (word == e)
             {
                 flag = true;
                 break;
@@ -57,6 +58,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         }
 
         if (flag) {continue;}
+        
         for (auto& e : dictionary)
         {
             if (word == e)
@@ -66,7 +68,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             }
         }
         if (flag) {continue;}
-        Word misspelled = {tempWord, wordPos};
+        Word misspelled = {word, wordPos};
         results.push_back(misspelled);
     }
     return results;
