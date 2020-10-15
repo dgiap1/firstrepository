@@ -11,11 +11,9 @@
 #include <cctype>
 using namespace std;
 
-string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
+string STUDENT = "dgiap1";
 
 #include "h18.h"
-
-// Place your function here
 
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
@@ -30,10 +28,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         in >> tempWord >> ws;
         for (char ch : tempWord)
         {
-            if (isalpha(ch) || isdigit(ch))
-            {
-                word += tolower(ch);
-            }
+            if (isalpha(ch) || isdigit(ch)) {word += tolower(ch);}
         }
 
         bool flag = false;
@@ -47,7 +42,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             }
         }
         if (flag) {continue;}
-        
+
         for (auto& e : excluded)
         {
             if (word == e)
@@ -58,7 +53,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         }
 
         if (flag) {continue;}
-        
+
         for (auto& e : dictionary)
         {
             if (word == e)
