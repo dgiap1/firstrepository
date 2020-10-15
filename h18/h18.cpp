@@ -18,26 +18,26 @@ string STUDENT = "dgiap1";
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
     vector<Word> results;
-    while(in)
+    while (in)
     {
-        pos_type currentPosition = in.tellg();
-        if(currentPosition == -1) {break;}
+        pos_type currentPos = in.tellg();
+        if(currentPos == -1) {break;}
 
-        string tempWord, word;
+        string tempWord, newWord;
         vector<pos_type> wordPos;
         in >> tempWord >> ws;
         for (char ch : tempWord)
         {
-            if (isalpha(ch) || isdigit(ch)) {word += tolower(ch);}
+            if (isalpha(ch) || isdigit(ch)) {newWord += tolower(ch);}
         }
 
         bool flag = false;
         for (auto& e : results)
         {
-            if (word == e.word)
+            if (newWord == e.word)
             {
                 flag = true;
-                e.positions.push_back(currentPosition);
+                e.positions.push_back(currentPos);
                 break;
             }
         }
@@ -45,25 +45,24 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
 
         for (auto& e : excluded)
         {
-            if (word == e)
+            if (newWord == e)
             {
                 flag = true;
                 break;
             }
         }
-
         if (flag) {continue;}
 
         for (auto& e : dictionary)
         {
-            if (word == e)
+            if (newWord == e)
             {
                 flag = true;
                 break;
             }
         }
         if (flag) {continue;}
-        Word misspelled = {word, wordPos};
+        Word misspelled = {newWord, wordPos};
         results.push_back(misspelled);
     }
     return results;
