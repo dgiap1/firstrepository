@@ -26,27 +26,26 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         if(currentPos == -1) {break;}
 
         in >> tempWord >> ws;
-
         for (char ch : tempWord)
         {
             if (isalpha(ch) || isdigit(ch)) {newWord += tolower(ch);}
         }
 
         bool flag = false;
-        for (auto& x : results)
+        for (auto& e : results)
         {
-            if (newWord == x.word)
+            if (newWord == e.word)
             {
                 flag = true;
-                x.positions.push_back(currentPos);
+                e.positions.push_back(currentPos);
                 break;
             }
         }
         if (flag) {continue;}
 
-        for (auto& x : excluded)
+        for (auto& e : excluded)
         {
-            if (newWord == x)
+            if (newWord == e)
             {
                 flag = true;
                 break;
@@ -54,9 +53,9 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         }
         if (flag) {continue;}
 
-        for (auto& x : dictionary)
+        for (auto& e : dictionary)
         {
-            if (newWord == x)
+            if (newWord == e)
             {
                 flag = true;
                 break;
