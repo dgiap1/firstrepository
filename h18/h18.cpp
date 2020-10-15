@@ -33,20 +33,20 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         }
 
         bool flag = false;
-        for (auto& e : results)
+        for (auto& x : results)
         {
-            if (newWord == e.word)
+            if (newWord == x.word)
             {
                 flag = true;
-                e.positions.push_back(currentPos);
+                x.positions.push_back(currentPos);
                 break;
             }
         }
         if (flag) {continue;}
 
-        for (auto& e : excluded)
+        for (auto& x : excluded)
         {
-            if (newWord == e)
+            if (newWord == x)
             {
                 flag = true;
                 break;
@@ -54,9 +54,9 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         }
         if (flag) {continue;}
 
-        for (auto& e : dictionary)
+        for (auto& x : dictionary)
         {
-            if (newWord == e)
+            if (newWord == x)
             {
                 flag = true;
                 break;
