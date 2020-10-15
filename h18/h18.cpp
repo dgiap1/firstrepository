@@ -19,6 +19,7 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
+    bool flag = false;
     vector<Word> results; // results: vector
     while(in) // while in // not end of file
     {
@@ -42,25 +43,43 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             if (tempWord == e.word) // If word found
             {
+                flag = true;
                 e.positions.push_back(currentPosition); // Then add position to element in results
-                continue; // Continue (next iteration)
+                break;
             }
+        }
+
+        if (flag)
+        {
+            continue;
         }
 
         for (auto& e : excluded) // Search excluded words for word
         {
             if (tempWord == e) // If word found
             {
-                continue; // Then continue (next iteration)
+                flag = true;
+                break;
             }
+        }
+
+        if (flag)
+        {
+            continue;
         }
 
         for (auto& e : dictionary) // Search the dictionary for word
         {
             if (tempWord == e) // If word found (Not misspelled)
             {
-                continue; // Then continue
+                flag = true;
+                break;
             }
+        }
+
+        if (flag)
+        {
+            continue;
         }
         Word misspelled = {tempWord, wordPos}; // Create a new word, populate with word,position
         results.push_back(misspelled); // Add new Word to results
