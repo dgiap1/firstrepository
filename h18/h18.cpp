@@ -23,12 +23,8 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
     while(in)
     {
         pos_type currentPosition = in.tellg();
-        if(currentPosition == -1)
-        {
-            break;
-        }
+        if(currentPosition == -1) {break;}
 
-        
         string tempWord, word;
         vector<pos_type> wordPos;
         in >> tempWord >> ws;
@@ -39,7 +35,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
                 word += tolower(ch);
             }
         }
-        
+
         bool flag = false;
         for (auto& e : results)
         {
@@ -50,12 +46,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
                 break;
             }
         }
-
-        if (flag)
-        {
-            continue;
-        }
-
+        if (flag) {continue;}
         for (auto& e : excluded) // Search excluded words for word
         {
             if (word == e) // If word found
@@ -65,28 +56,20 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             }
         }
 
-        if (flag)
+        if (flag) {continue;}
+        for (auto& e : dictionary)
         {
-            continue;
-        }
-
-        for (auto& e : dictionary) // Search the dictionary for word
-        {
-            if (word == e) // If word found (Not misspelled)
+            if (word == e)
             {
                 flag = true;
                 break;
             }
         }
-
-        if (flag)
-        {
-            continue;
-        }
-        Word misspelled = {tempWord, wordPos}; // Create a new word, populate with word,position
-        results.push_back(misspelled); // Add new Word to results
-    } // End loop
-    return results; // Return results (misspelled words and their positions)
+        if (flag) {continue;}
+        Word misspelled = {tempWord, wordPos};
+        results.push_back(misspelled);
+    }
+    return results;
 }
 
 
