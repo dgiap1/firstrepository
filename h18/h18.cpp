@@ -24,7 +24,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         if(currentPos == -1) {break;}
 
         string tempWord, newWord;
-        vector<pos_type> wordPos(currentPos);
+        vector<pos_type> wordPos;
         in >> tempWord >> ws;
 
         for (char ch : tempWord)
