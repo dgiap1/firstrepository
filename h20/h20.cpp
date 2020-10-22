@@ -19,7 +19,7 @@ void greenScreen(unsigned char* const img, int width, int height)
     while (p != end)
     {
         auto bigger = max(*p, *(p+2));
-        if(*(p+1) >= 2 * bigger)
+        if(*(p+1) > 2 * bigger)
         {
             *p = 0;
             *(p + 1) = 0;
