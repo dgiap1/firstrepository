@@ -1,20 +1,28 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Derek Giap
+ *  @date 10/21/2020
  *  @file h19.cpp
  */
 #include <string>
 #include <iostream>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 
 #include "h19.h"
 
 // Add your code here
-
-
+void negative(unsigned char * const img, int width, int height)
+{
+    unsigned char * p = img;
+    unsigned char * end = img + width * height * 4;
+    while (p != end)
+    {
+        *p = 255 - *p;
+        p++;
+    }
+}
 
 /////////////// STUDENT TESTING ////////////////////
 int run()
