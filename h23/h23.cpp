@@ -15,7 +15,7 @@ int alternatingSum(const int a[], size_t size)
 {
     size_t current_size = 0;
     double total = 0;
-    if (current_size < size)
+    while (current_size < size)
     {
         if (current_size % 2 == 0)
         {
