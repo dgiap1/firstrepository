@@ -14,22 +14,21 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 bool sameSet(const int *aBeg,const int *aEnd,const int *bBeg,const int *bEnd)
 {
-   bool result = false;
-   bool chek = false;
-    for(const int *p = aBeg;*p != *aEnd; p++)
+    bool result = false;
+    bool check = false;
+    for(const int *p = aBeg; *p != *aEnd; p++)
     {
-        chek = false;
-        for(const int *q = bBeg;*q != *bEnd; q++)
+        check = false;
+        for(const int *q = bBeg; *q != *bEnd; q++)
         {
-
             if(*q == *p)
             {
-                chek = true;
+                check = true;
                 break;
             }
         }
 
-        if(chek == false)
+        if(check == false)
         {
             result = false;
             break;
@@ -40,20 +39,20 @@ bool sameSet(const int *aBeg,const int *aEnd,const int *bBeg,const int *bEnd)
         }
     }
 
-result = false;
-chek = false;
-    for (const int *p1 = bBeg;*p1 != *bEnd; p1++)
+    result = false;
+    check = false;
+    for (const int *p1 = bBeg; *p1 != *bEnd; p1++)
     {
-        chek = false;
-        for (const int *q1 = aBeg;*q1 != *aEnd; q1++)
+        check = false;
+        for (const int *q1 = aBeg; *q1 != *aEnd; q1++)
         {
             if (*q1 == *p1)
             {
-                chek=true;
+                check=true;
                 break;
             }
         }
-        if (chek == false)
+        if (check == false)
         {
             result = false;
             break;
