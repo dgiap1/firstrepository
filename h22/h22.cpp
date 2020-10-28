@@ -20,7 +20,7 @@ void flip(UC* const img, int width, int height, Direction dir)
         {
             Pixel * front = reinterpret_cast<Pixel*>(img) + row * width * 4;
             Pixel * back = front + width - 1;
-            Pixel * temp{0};
+            Pixel * temp = 0;
             while (front < back)
             {
                 *temp = *front;
@@ -37,7 +37,7 @@ void flip(UC* const img, int width, int height, Direction dir)
         {
             Pixel * top = reinterpret_cast<Pixel*>(img) + col * height * 4;
             Pixel * bottom = top + width * (height - 1);
-            Pixel * temp2{0};
+            Pixel * temp2 = 0;
             while (top < bottom)
             {
                 *temp2 = *top;
