@@ -15,11 +15,11 @@ void flip(UC* const img, int width, int height, Direction dir)
 {
     if (dir == Direction::LtoR || dir == Direction::RtoL)
     {
-        for (int row = 0; row < height - 1; ++row)
+        for (int row = 0; row < height; ++row)
         {
             Pixel * front = reinterpret_cast<Pixel*>(img) + row * width;
             Pixel * back = front + width - 1;
-            do
+            while (front < back)
             {
                 auto temp = *front;
                 *front = *back;
@@ -27,17 +27,16 @@ void flip(UC* const img, int width, int height, Direction dir)
                 front++;
                 back--;
             }
-            while (front < back);
         }
     }
 
     if (dir == Direction::TtoB || dir == Direction::BtoT)
     {
-        for (int col = 0; col < width - 1; ++col)
+        for (int col = 0; col < width; ++col)
         {
             Pixel * top = reinterpret_cast<Pixel*>(img) + col;
             Pixel * bottom = top + width * (height - 1);
-            do
+            while (top < bottom)
             {
                 auto temp2 = *top;
                 *top = *bottom;
@@ -45,7 +44,6 @@ void flip(UC* const img, int width, int height, Direction dir)
                 top = top + width;
                 bottom = bottom - width;
             }
-            while (top < bottom);
         }
     }
 }
