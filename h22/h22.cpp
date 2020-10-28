@@ -54,32 +54,26 @@ void mirror(UC* const img, int width, int height, Direction dir)
     {
         Pixel * front = reinterpret_cast<Pixel*>(img) + row * width;
         Pixel * back = front + width - 1;
-        while (front < back)
+        if (dir == Direction::LtoR)
         {
-            if (dir == Direction::LtoR)
-            {
-                *back = *front;
-            }
-            else if (dir == Direction::RtoL)
-            {
-                *front = *back;
-            }
+            *back = *front;
+        }
+        else if (dir == Direction::RtoL)
+        {
+            *front = *back;
         }
     }
     for (int col = 0; col < width; ++col)
     {
         Pixel * top = reinterpret_cast<Pixel*>(img) + col;
         Pixel * bottom = top + width * (height - 1);
-        while (top < bottom)
+        if (dir == Direction::TtoB)
         {
-            if (dir == Direction::TtoB)
-            {
-                *top = *bottom;
-            }
-            else if (dir == Direction::BtoT)
-            {
-                *bottom = *top;
-            }
+            *top = *bottom;
+        }
+        else if (dir == Direction::BtoT)
+        {
+            *bottom = *top;
         }
     }
 }
