@@ -61,10 +61,14 @@ void mirror(UC* const img, int width, int height, Direction dir)
                 if (dir == Direction::LtoR)
                 {
                     *back = *front;
+                    front++;
+                    back--;
                 }
                 else if (dir == Direction::RtoL)
                 {
                     *front = *back;
+                    front++;
+                    back--;
                 }
             }
         }
@@ -81,10 +85,14 @@ void mirror(UC* const img, int width, int height, Direction dir)
                 if (dir == Direction::TtoB)
                 {
                     *bottom = *top;
+                    top = top + width;
+                    bottom = bottom - width;
                 }
                 else if (dir == Direction::BtoT)
                 {
                     *top = *bottom;
+                    top = top + width;
+                    bottom = bottom - width;
                 }
             }
         }
