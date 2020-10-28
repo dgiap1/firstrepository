@@ -15,7 +15,17 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 bool sameSet(const int *aBeg, const int *aEnd, const int *bBeg, const int *bEnd)
 {
     bool result = true;
-    for (size_t i = 0; i < (unsigned int)*aEnd; i++)
+    size_t current_size = 0;
+    size_t aSize = *aEnd;
+    size_t bSize = *bEnd;
+    for (size_t i = 0; i < aSize; i++)
+    {
+        while (current_size < aSize)
+        {
+            result = false;
+        }
+    }
+    for (size_t i = 0; i < bSize; i++)
     {
         result = false;
     }
