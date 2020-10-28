@@ -50,35 +50,42 @@ void flip(UC* const img, int width, int height, Direction dir)
 
 void mirror(UC* const img, int width, int height, Direction dir)
 {
-    for (int row = 0; row < height; ++row)
+    if (dir == Direction::LtoR || dir == Direction::RtoL)
     {
-        Pixel * front = reinterpret_cast<Pixel*>(img) + row * width;
-        Pixel * back = front + width - 1;
-        while (front < back)
+        for (int row = 0; row < height; ++row)
         {
-            if (dir == Direction::LtoR)
+            Pixel * front = reinterpret_cast<Pixel*>(img) + row * width;
+            Pixel * back = front + width - 1;
+            while (front < back)
             {
-                *front = *back;
-            }
-            else if (dir == Direction::RtoL)
-            {
-                *back = *front;
+                if (dir == Direction::LtoR)
+                {
+                    *back = *front;
+                }
+                else if (dir == Direction::RtoL)
+                {
+                    *front = *back;
+                }
             }
         }
     }
-    for (int col = 0; col < width; ++col)
+
+    if (dir == Direction::TtoB || dir == Direction::BtoT)
     {
-        Pixel * top = reinterpret_cast<Pixel*>(img) + col;
-        Pixel * bottom = top + width * (height - 1);
-        while (top < bottom)
+        for (int col = 0; col < width; ++col)
         {
-            if (dir == Direction::TtoB)
+            Pixel * top = reinterpret_cast<Pixel*>(img) + col;
+            Pixel * bottom = top + width * (height - 1);
+            while (top < bottom)
             {
-                *bottom = *top;
-            }
-            else if (dir == Direction::BtoT)
-            {
-                *top = *bottom;
+                if (dir == Direction::TtoB)
+                {
+                    *bottom = *top;
+                }
+                else if (dir == Direction::BtoT)
+                {
+                    *top = *bottom;
+                }
             }
         }
     }
