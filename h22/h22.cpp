@@ -14,32 +14,38 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 // Add your code here
 void flip(UC* const img, int width, int height, Direction dir)
 {
-    for (int row = 0; row < height; ++row)
+    if (dir == Direction::LtoR || dir == Direction::RtoL)
     {
-        Pixel * front = reinterpret_cast<Pixel*>(img) + row * width * 4;
-        Pixel * back = front + width - 1;
-        Pixel * temp{0};
-        while (front < back)
+        for (int row = 0; row < height; ++row)
         {
-            *temp = *front;
-            *front = *back;
-            *back = *temp;
-            front++;
-            back--;
+            Pixel * front = reinterpret_cast<Pixel*>(img) + row * width * 4;
+            Pixel * back = front + width - 1;
+            Pixel * temp{0};
+            while (front < back)
+            {
+                *temp = *front;
+                *front = *back;
+                *back = *temp;
+                front++;
+                back--;
+            }
         }
     }
-    for (int col = 0; col < width; ++col)
+    if (dir == Direction::TtoB || dir == Direction::BtoT)
     {
-        Pixel * top = reinterpret_cast<Pixel*>(img) + col * height * 4;
-        Pixel * bottom = top + width * (height - 1);
-        Pixel * temp2{0};
-        while (top < bottom)
+        for (int col = 0; col < width; ++col)
         {
-            *temp2 = *top;
-            *top = *bottom;
-            *bottom = *temp2;
-            top = top + width;
-            bottom = bottom - width;
+            Pixel * top = reinterpret_cast<Pixel*>(img) + col * height * 4;
+            Pixel * bottom = top + width * (height - 1);
+            Pixel * temp2{0};
+            while (top < bottom)
+            {
+                *temp2 = *top;
+                *top = *bottom;
+                *bottom = *temp2;
+                top = top + width;
+                bottom = bottom - width;
+            }
         }
     }
 }
