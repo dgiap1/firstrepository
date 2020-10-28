@@ -11,12 +11,11 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 #include "h22.h"
 
-// Add your code here
 void flip(UC* const img, int width, int height, Direction dir)
 {
     if (dir == Direction::LtoR || dir == Direction::RtoL)
     {
-        for (int row = 0; row < height; ++row)
+        for (int row = 0; row < height - 1; ++row)
         {
             Pixel * front = reinterpret_cast<Pixel*>(img) + row * width * 4;
             Pixel * back = front + width - 1;
@@ -33,7 +32,7 @@ void flip(UC* const img, int width, int height, Direction dir)
 
     if (dir == Direction::TtoB || dir == Direction::BtoT)
     {
-        for (int col = 0; col < width; ++col)
+        for (int col = 0; col < width - 1; ++col)
         {
             Pixel * top = reinterpret_cast<Pixel*>(img) + col * height * 4;
             Pixel * bottom = top + width * (height - 1);
