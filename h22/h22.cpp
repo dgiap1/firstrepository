@@ -20,32 +20,33 @@ void flip(UC* const img, int width, int height, Direction dir)
         {
             Pixel * front = reinterpret_cast<Pixel*>(img) + row * width * 4;
             Pixel * back = front + width - 1;
-            Pixel * temp = front;
-            while (front < back)
+            do
             {
-                *temp = *front;
+                auto temp = *front;
                 *front = *back;
-                *back = *temp;
+                *back = temp;
                 front++;
                 back--;
             }
+            while (front < back);
         }
     }
+
     if (dir == Direction::TtoB || dir == Direction::BtoT)
     {
         for (int col = 0; col < width; ++col)
         {
             Pixel * top = reinterpret_cast<Pixel*>(img) + col * height * 4;
             Pixel * bottom = top + width * (height - 1);
-            Pixel * temp2 = top;
-            while (top < bottom)
+            do
             {
-                *temp2 = *top;
+                auto temp2 = *top;
                 *top = *bottom;
-                *bottom = *temp2;
+                *bottom = temp2;
                 top = top + width;
                 bottom = bottom - width;
             }
+            while (top < bottom);
         }
     }
 }
