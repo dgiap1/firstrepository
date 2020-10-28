@@ -12,30 +12,79 @@ string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
 #include "h24.h"
 
-bool sameSet(const int *aBeg, const int *aEnd, const int *bBeg, const int *bEnd)
+bool sameSet(const int *aBeg,const int *aEnd,const int *bBeg,const int *bEnd)
 {
-    bool result = true;
-    size_t current_size = 0;
-    size_t aSize = *aEnd;
-    size_t bSize = *bEnd;
-    for (size_t i = 0; i < aSize; i++)
+   bool result = false;
+   bool chek = false;
+    for(const int *p = aBeg;*p != *aEnd; p++)
     {
-        while (current_size < aSize)
+        chek = false;
+        for(const int *q = bBeg;*q != *bEnd; q++)
+        {
+
+            if(*q == *p)
+            {
+                chek = true;
+                break;
+            }
+        }
+
+        if(chek == false)
         {
             result = false;
+            break;
+        }
+        else
+        {
+            result = true;
         }
     }
-    for (size_t i = 0; i < bSize; i++)
+
+result = false;
+chek = false;
+    for (const int *p1 = bBeg;*p1 != *bEnd; p1++)
     {
-        result = false;
+        chek = false;
+        for (const int *q1 = aBeg;*q1 != *aEnd; q1++)
+        {
+            if (*q1 == *p1)
+            {
+                chek=true;
+                break;
+            }
+        }
+        if (chek == false)
+        {
+            result = false;
+            break;
+        }
+        else
+        {
+            result = true;
+        }
     }
-    return result;
+   return result;
 }
 
-void copyEvens(const int a[], size_t aSize, int b[], size_t& bSize)
+void copyEvens(const int a[], size_t aSize, int b[], size_t &bSize)
 {
+    if(bSize < aSize)
+    {
+        throw length_error("Size is Lower than source size");
+    }
+    else
+    {
+        bSize = 0;
+        for(size_t i=0; i < aSize; i++)
+        {
+            if (a[i] % 2 == 0)
+            {
+                b[bSize] = a[i];
+                bSize++;
+            }
+        }
+    }
 }
-
 /////////////// STUDENT TESTING ////////////////////
 #include <iostream>
 int run()
