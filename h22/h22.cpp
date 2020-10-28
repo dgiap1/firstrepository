@@ -56,11 +56,11 @@ void mirror(UC* const img, int width, int height, Direction dir)
         Pixel * back = front + width - 1;
         if (dir == Direction::LtoR)
         {
-            *back = *front;
+            *front = *back;
         }
         else if (dir == Direction::RtoL)
         {
-            *front = *back;
+            *back = *front;
         }
     }
     for (int col = 0; col < width; ++col)
