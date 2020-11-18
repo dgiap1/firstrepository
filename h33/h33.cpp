@@ -1,7 +1,7 @@
 /**
     @file 33.cpp
-    @author your name here
-    @version what day and meeting time
+    @author Derek Giap
+    @version 11/18/2020
 */
 #include <string>
 #include <stdexcept>
@@ -9,9 +9,20 @@ using namespace std;
 
 #include "h33.h"
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "dgiap1"; // Add your Canvas/occ-email ID
 
-// Add your implementation here
+string stringClean(const string& str)
+{
+    if (str.size() < 2)
+    {
+        return str;
+    }
+    if (str[0] == str[1])
+    {
+        return stringClean(str.substr(1));
+    }
+    return str[0] + stringClean(str.substr(1));
+}
 
 
 
