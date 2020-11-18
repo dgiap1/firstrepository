@@ -1,7 +1,7 @@
 /**
     @file h32.cpp
-    @author your name here
-    @version what day and meeting time
+    @author Derek Giap
+    @version 11/18/2020
 */
 #include <string>
 #include <stdexcept>
